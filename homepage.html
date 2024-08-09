@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+</html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gajou Luxe - le luxe d'ambre</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magic-ui@latest/dist/magic-ui.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .product-card {
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            transition: transform 0.3s ease;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+        .product-card .card-title {
+            text-align: center;
+            font-weight: bold;
+        }
+        .media-icons a {
+            font-size: 24px;
+            color: #333;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        .media-icons a:hover {
+            color: #2272FF;
+        }
+        .deals-container {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .performance-section {
+            background-color: #e9ecef;
+            padding: 40px 0;
+        }
+        .performance-item {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .performance-item:hover {
+            transform: scale(1.05);
+        }
+        .categories-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        .category-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .category-item img {
+        	width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .category-item:hover img {
+            transform: scale(1.1);
+        }
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            opacity: 0;
+            padding: 20px;
+            transition: opacity 0.3s ease;
+        }
+        .category-overlay {
+            opacity: 1;
+        }
+        .category-item:hover {
+        	opacity: 1;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .category-overlay h3 {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        .deals-of-day {
+            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            padding: 50px 0;
+            color: #333;
+        }
+
+        .deal-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .deal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            padding: 20px 0 100px;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hero-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            position: relative;
+    		z-index: 10;
+        }
+
+        .hero-nav .navbar-brand {
+   		color: #fff;
+    	font-size: 2rem;
+    	font-weight: 700;
+    	text-decoration: none;
+		}
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-buttons {
+    	display: flex;
+    	gap: 10px;
+		}
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .nav-btn {
+    	background-color: rgba(255, 255, 255, 0.2);
+    	color: #fff;
+    	border: none;
+    	padding: 8px 16px;
+    	font-size: 1rem;
+    	border-radius: 20px;
+    	transition: all 0.3s ease;
+    	text-decoration: none;
+    	
+    	margin-left: 0px;
+		}
+		.nav-btn:hover {
+    	background-color: rgba(255, 255, 255, 0.4);
+    	color: #fff;
+		}
+
+        .hero-btn:hover {
+            background-color: #ff9a9e;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 6s ease-in-out;
+            transform: scale(1.1);
+        }
+        .hero-image-carousel {
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        .hero-image-carousel {
+            animation: float 6s ease-in-out infinite;
+        }
+         .hero-image.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(-50%) translateX(0); }
+            50% { transform: translateY(-50%) translateX(-20px); }
+            100% { transform: translateY(-50%) translateX(0); }
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        footer {
+            background-color: #e9ecef;
+            color: #333;
+            padding: 60px 0;
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .footer-links a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ff9a9e;
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ff9a9e;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main>
+    	<section class="hero-section">
+    <div class="container">
+        <nav class="hero-nav">
+            <div class="nav-buttons">
+                <a class="nav-btn" href="#home">Home</a>
+                <a class="nav-btn" href="#products">Products</a>
+                <a class="nav-btn" href="#about">About</a>
+                <a class="nav-btn" href="#contact">Contact</a>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-lg-6 hero-content">
+                <h1 class="hero-title" data-aos="fade-up">Welcome to Gajou Luxe</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Discover the luxury of amber in our exquisite collection.</p>
+            </div>
+        </div>
+    </div>
+    <div class="hero-image-carousel" data-aos="fade-left" data-aos-delay="600">
+        <div class="hero-image active" style="background-image: url('images/photo_2024-08-08_17-02-16.jpg');"></div>
+        <div class="hero-image" style="background-image: url('images/photo_2024-08-08_17-02-04.jpg');"></div>
+        <div class="hero-image" style="background-image: url('images/photo_2024-08-08_17-00-32.jpg');"></div>
+    </div>
+</section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-item" data-aos="zoom-in">
+                        <img src="images\photo_2024-08-08_18-21-30.jpg" class="img-fluid" alt="Crop Tops">
+                        <div class="category-overlay">
+                            <h3>Crop Tops</h3>
+                        </div>
+                    </div>
+           
+                <div class="category-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images\photo_2024-08-08_18-21-35.jpg" class="img-fluid" alt="Active Wear">
+                        <div class="category-overlay">
+                            <h3>Active Wear</h3>
+                        </div>
+                    </div>
+                <div class="category-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images\photo_2024-08-08_16-59-44.jpg" class="img-fluid" alt="Mwaa">
+                        <div class="category-overlay">
+                            <h3>Mwaaa</h3>
+                        </div>
+                    </div>
+                <div class="category-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images\photo_2024-08-08_16-59-42.jpg" class="img-fluid" alt="Lingerie & Sleepwear">
+                        <div class="category-overlay">
+                            <h3>Lingerie & Sleepwear</h3>
+                        </div>
+                    </div>
+                <div class="category-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images\photo_2024-08-08_17-02-22.jpg" class="img-fluid" alt="Jeans & Pants">
+                        <div class="category-overlay">
+                            <h3>Jeans & Pants</h3>
+                        </div>
+                    </div>
+                <div class="category-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images\photo_2024-08-08_18-21-40.jpg" class="img-fluid" alt="Casual Tops">
+                        <div class="category-overlay">
+                            <h3>Casual Tops</h3>
+                        </div>
+                    </div>
+                <div class="category-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images\photo_2024-08-08_17-02-04.jpg" class="img-fluid" alt="Lounge Wear">
+                        <div class="category-overlay">
+                            <h3>Lounge Wear</h3>
+                        </div>
+                    </div>
+                <div class="category-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images\photo_2024-08-08_18-22-28.jpg" class="img-fluid" alt="Dresses">
+                        <div class="category-overlay">
+                            <h3>Dresses</h3>
+                        </div>
+                    </div>
+                <div class="category-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images\photo_2024-08-08_18-23-05.jpg" class="img-fluid" alt="Skirts">
+                        <div class="category-overlay">
+                            <h3>Skirts</h3>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Deals of the Day Section -->
+        <section class="deals-of-day">
+            <div class="container">
+                <h2 class="text-center mb-5 text-glow" data-aos="fade-up">Deals of the Day</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="100">
+                        <div class="deal-card">
+                            <img src="images/photo_2024-08-08_17-00-32.jpg" class="card-img-top" alt="Deal 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Summer Collection 50% Off</h5>
+                                <p class="card-text">Limited time offer on our latest summer styles!</p>
+                                <a href="#" class="btn btn-danger">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="200">
+                        <div class="deal-card">
+                            <img src="images/photo_2024-08-09_18-05-27.jpg" class="card-img-top" alt="Deal 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Buy 2 Get 1 Free</h5>
+                                <p class="card-text">On all accessories and jewelry items!</p>
+                                <a href="#" class="btn btn-danger">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="300">
+                        <div class="deal-card">
+                            <img src="images/photo_2024-08-09_18-10-11.jpg" class="card-img-top" alt="Deal 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Free Shipping on Orders $100+</h5>
+                                <p class="card-text">Limited time offer for all domestic orders!</p>
+                                <a href="#" class="btn btn-danger">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Product Grid Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-up">Our Products</h2>
+                <div class="product-grid">
+                    <div class="product-item" data-aos="zoom-in">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-20.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Hot Pink Dress</h5>
+                            <p>Perfect for special occasions</p>
+                            <p class="text-muted">$199.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-17.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Short Black Dress</h5>
+                            <p>Light and breezy for hot dates</p>
+                            <p class="text-muted">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-34.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Two Piece</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_18-22-35.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Floral Black Elegant Dress</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_18-23-00.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Skirts</h5>
+                            <p>Perfect for special occasions</p>
+                            <p class="text-muted">$199.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_18-22-57.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Short Blue Party Dress</h5>
+                            <p>Light and breezy for hot dates</p>
+                            <p class="text-muted">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_18-22-33.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Sexy short Dress</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_18-21-48.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Sexy Black Dress</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-20.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Hot Pink Dress</h5>
+                            <p>Perfect for special occasions</p>
+                            <p class="text-muted">$199.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-17.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Short Black Dress</h5>
+                            <p>Light and breezy for hot dates</p>
+                            <p class="text-muted">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-34.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Two Piece</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_18-22-35.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Floral Black Elegant Dress</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-20.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Hot Pink Dress</h5>
+                            <p>Perfect for special occasions</p>
+                            <p class="text-muted">$199.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-17.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Short Black Dress</h5>
+                            <p>Light and breezy for hot dates</p>
+                            <p class="text-muted">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-34.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Two Piece</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_18-22-35.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Floral Black Elegant Dress</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-20.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Hot Pink Dress</h5>
+                            <p>Perfect for special occasions</p>
+                            <p class="text-muted">$199.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-17.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Short Black Dress</h5>
+                            <p>Light and breezy for hot dates</p>
+                            <p class="text-muted">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-34.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Two Piece</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_18-22-35.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Floral Black Elegant Dress</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-20.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Hot Pink Dress</h5>
+                            <p>Perfect for special occasions</p>
+                            <p class="text-muted">$199.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-17.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Short Black Dress</h5>
+                            <p>Light and breezy for hot dates</p>
+                            <p class="text-muted">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_17-01-34.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Two Piece</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="product-image" style="background-image: url('images/photo_2024-08-08_18-22-35.jpg');"></div>
+                        <div class="product-info">
+                            <h5>Floral Black Elegant Dress</h5>
+                            <p>Stylish and practical</p>
+                            <p class="text-muted">$299.99</p>
+                        </div>
+                    </div>
+                    <!-- Add more product items as needed -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Performance Section -->
+        <section class="performance-section wow fadeIn" data-wow-delay="0.3s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="performance-item hover-effect">
+                            <i class="fas fa-shipping-fast fa-3x mb-3"></i>
+                            <h4>Fast Shipping</h4>
+                            <p>We deliver your products in record time</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="performance-item hover-effect">
+                            <i class="fas fa-user-shield fa-3x mb-3"></i>
+                            <h4>Secure Payments</h4>
+                            <p>Your transactions are always safe with us</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="performance-item hover-effect">
+                            <i class="fas fa-gem fa-3x mb-3"></i>
+                            <h4>Genuine Products</h4>
+                            <p>We guarantee the authenticity of all our products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">About Gajou Luxe</h5>
+                    <p class="footer-text">Gajou Luxe offers premium amber-based products for discerning customers. Experience luxury like never before.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/magic-ui@latest/dist/magic-ui.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+        <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            MagicUI.init();
+            
+            // Add Magic UI effects to elements
+            const hoverElements = document.querySelectorAll('.hover-effect');
+            hoverElements.forEach(el => new MagicUI.Hover(el));
+
+            const floatElements = document.querySelectorAll('.performance-item');
+            floatElements.forEach(el => new MagicUI.Float(el));
+
+            const shakeElements = document.querySelectorAll('.btn-danger');
+            shakeElements.forEach(el => new MagicUI.Shake(el));
+        });
+
+        // Hero image carousel
+        const heroImages = document.querySelectorAll('.hero-image');
+        let currentImageIndex = 0;
+
+        function changeHeroImage() {
+            heroImages[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+            heroImages[currentImageIndex].classList.add('active');
+        }
+
+        setInterval(changeHeroImage, 5000); // Change image every 5 seconds
+    </script>
+</body>
+</html>
