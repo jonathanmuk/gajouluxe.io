@@ -1,0 +1,2574 @@
+[11-Aug-2024 10:39:54 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 10:59:00 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:03:17 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:16:25 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:18:57 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:18:58 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:18:58 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:18:59 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:18:59 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:18:59 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:18:59 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:18:59 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:00 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:00 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:00 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:00 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:00 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:01 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:01 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:01 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:01 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:01 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:02 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:02 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:02 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:02 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:02 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:03 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:03 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:03 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:03 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:03 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:04 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:04 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:04 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:04 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:04 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:06 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:19:08 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:20:20 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:21:08 Europe/Berlin] Error in get_products.php: SQLSTATE[HY093]: Invalid parameter number
+[11-Aug-2024 11:34:42 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:42 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:55 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:55 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:55 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:55 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:55 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:55 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:56 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:56 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:56 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:56 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:56 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:56 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:56 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:56 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:56 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:56 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:56 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:56 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:57 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:57 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:57 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:57 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:34:59 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:34:59 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:34:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:35:00 Europe/Berlin] SQL Query: SELECT * FROM products WHERE subcategory_id = ?  LIMIT ? OFFSET ?
+[11-Aug-2024 11:35:00 Europe/Berlin] Parameters: Array
+(
+    [0] => 1
+    [1] => 12
+    [2] => 0
+)
+
+[11-Aug-2024 11:35:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:35:01 Europe/Berlin] SQL Query: SELECT * FROM products WHERE subcategory_id = ?  LIMIT ? OFFSET ?
+[11-Aug-2024 11:35:01 Europe/Berlin] Parameters: Array
+(
+    [0] => 2
+    [1] => 12
+    [2] => 0
+)
+
+[11-Aug-2024 11:35:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:35:09 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:35:09 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:35:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:60
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 60
+[11-Aug-2024 11:47:19 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:19 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:20 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:20 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:21 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:21 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:21 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:21 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:23 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:23 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:23 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:23 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:23 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:23 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:23 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:23 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:23 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:23 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:24 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:24 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:24 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:24 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:25 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:25 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:25 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:25 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:29 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:29 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:30 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:30 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:30 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:30 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:30 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:30 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:30 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:30 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:30 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:30 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:31 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:31 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:31 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:31 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:31 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:35 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:35 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:47:44 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:47:44 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:47:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:04 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:04 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:05 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:05 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:05 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:05 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:05 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:05 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:06 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:06 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:06 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:06 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:06 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:06 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:06 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:06 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:07 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:07 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:07 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:07 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:07 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:07 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:08 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:08 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:08 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:08 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:09 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:09 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:09 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:09 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:09 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:09 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:09 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:09 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:48:34 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:48:34 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:48:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::paramCount() in C:\xampp\htdocs\Gajou luxe\get_products.php:66
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 66
+[11-Aug-2024 11:58:04 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:58:04 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:58:32 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:58:32 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:58:45 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:58:45 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:58:47 Europe/Berlin] SQL Query: SELECT * FROM products WHERE subcategory_id = ?  LIMIT ? OFFSET ?
+[11-Aug-2024 11:58:47 Europe/Berlin] Parameters: Array
+(
+    [0] => 1
+    [1] => 12
+    [2] => 0
+)
+
+[11-Aug-2024 11:58:56 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:58:56 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:59:01 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:59:01 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:59:02 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:59:02 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:59:03 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:59:03 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:59:04 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:59:04 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 11:59:09 Europe/Berlin] SQL Query: SELECT * FROM products WHERE subcategory_id = ?  LIMIT ? OFFSET ?
+[11-Aug-2024 11:59:09 Europe/Berlin] Parameters: Array
+(
+    [0] => 2
+    [1] => 12
+    [2] => 0
+)
+
+[11-Aug-2024 11:59:13 Europe/Berlin] SQL Query: SELECT * FROM products WHERE subcategory_id = ?  LIMIT ? OFFSET ?
+[11-Aug-2024 11:59:13 Europe/Berlin] Parameters: Array
+(
+    [0] => 1
+    [1] => 12
+    [2] => 0
+)
+
+[11-Aug-2024 11:59:17 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 11:59:17 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 12:32:35 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 12:32:35 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 12:48:22 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 12:48:22 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 12:58:33 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 12:58:33 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 12:59:53 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 12:59:53 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 13:00:44 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 13:00:44 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 13:03:45 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 13:03:45 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 13:05:55 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 13:05:55 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 13:07:06 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 13:07:06 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 13:15:33 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 13:15:33 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 13:31:04 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 13:31:04 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 13:32:59 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 13:32:59 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 13:33:34 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 13:33:34 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 13:33:35 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 13:33:35 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 13:44:01 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 13:44:01 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 18:13:34 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 18:13:34 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 18:13:36 Europe/Berlin] SQL Query: SELECT * FROM products WHERE subcategory_id = ?  LIMIT ? OFFSET ?
+[11-Aug-2024 18:13:36 Europe/Berlin] Parameters: Array
+(
+    [0] => 1
+    [1] => 12
+    [2] => 0
+)
+
+[11-Aug-2024 18:13:37 Europe/Berlin] SQL Query: SELECT * FROM products WHERE subcategory_id = ?  LIMIT ? OFFSET ?
+[11-Aug-2024 18:13:37 Europe/Berlin] Parameters: Array
+(
+    [0] => 2
+    [1] => 12
+    [2] => 0
+)
+
+[11-Aug-2024 18:14:09 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 18:14:09 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 18:14:11 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 18:14:11 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 19:08:17 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 19:08:17 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 19:12:31 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 19:12:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 20:26:16 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 20:26:16 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 20:26:59 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 20:26:59 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 20:27:22 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 20:27:22 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 20:44:07 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 20:44:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 20:46:35 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 20:46:35 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:09:03 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:09:03 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:09:32 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:09:32 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:16:10 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:16:10 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:16:29 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:16:29 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:18:24 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:18:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:18:31 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:18:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:18:40 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:18:40 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:18:50 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:18:50 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:19:18 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:19:18 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:33:51 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:33:51 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:35:07 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:35:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:37:34 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:37:34 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[11-Aug-2024 21:39:08 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[11-Aug-2024 21:39:08 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 16:48:57 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 16:48:57 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:02:55 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:02:55 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:03:09 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:03:09 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:03:11 Europe/Berlin] SQL Query: SELECT * FROM products WHERE subcategory_id = ?  LIMIT ? OFFSET ?
+[17-Aug-2024 17:03:11 Europe/Berlin] Parameters: Array
+(
+    [0] => 1
+    [1] => 12
+    [2] => 0
+)
+
+[17-Aug-2024 17:03:14 Europe/Berlin] SQL Query: SELECT * FROM products WHERE subcategory_id = ?  LIMIT ? OFFSET ?
+[17-Aug-2024 17:03:14 Europe/Berlin] Parameters: Array
+(
+    [0] => 2
+    [1] => 12
+    [2] => 0
+)
+
+[17-Aug-2024 17:03:16 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:03:16 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:03:19 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:03:19 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:03:21 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:03:21 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:03:22 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:03:22 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:03:29 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:03:29 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:04:20 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:04:20 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:04:22 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:04:22 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:04:30 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:04:30 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:07:34 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:07:34 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:08:33 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:08:33 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:08:52 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:08:52 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[17-Aug-2024 17:30:20 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[17-Aug-2024 17:30:20 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[20-Aug-2024 17:32:44 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[20-Aug-2024 17:32:44 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[20-Aug-2024 18:00:49 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[20-Aug-2024 18:00:49 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[20-Aug-2024 18:16:54 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[20-Aug-2024 18:16:54 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[20-Aug-2024 18:19:24 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[20-Aug-2024 18:19:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[30-Aug-2024 16:07:22 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[30-Aug-2024 16:07:22 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[30-Aug-2024 16:09:16 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[30-Aug-2024 16:09:16 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[30-Aug-2024 16:09:17 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[30-Aug-2024 16:09:17 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[30-Aug-2024 16:09:18 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[30-Aug-2024 16:09:18 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[30-Aug-2024 16:09:19 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[30-Aug-2024 16:09:19 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[30-Aug-2024 16:09:24 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[30-Aug-2024 16:09:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[30-Aug-2024 16:09:25 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[30-Aug-2024 16:09:25 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 14:21:53 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 14:21:53 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 14:25:54 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 14:25:54 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 14:27:07 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 14:27:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 14:48:42 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 14:48:42 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 15:38:33 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 15:38:33 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 15:52:46 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 15:52:46 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 15:53:42 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 15:53:42 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 15:56:38 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 15:56:38 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:05:12 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:05:12 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:08:02 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:08:02 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:08:50 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:08:50 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:16:01 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:16:01 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:16:04 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:16:04 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:19:05 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:19:05 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:28:11 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:28:11 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:31:40 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:31:40 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:33:28 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:33:28 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:34:31 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:34:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:35:57 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:35:57 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:36:24 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:36:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:37:26 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:37:26 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:40:28 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:40:28 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:41:28 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:41:28 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:43:00 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:43:00 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:44:13 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:44:13 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:45:19 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:45:19 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:45:21 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:45:21 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:45:22 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:45:22 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:45:24 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:45:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:45:25 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:45:25 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:45:42 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:45:42 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:46:03 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:46:03 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:46:04 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:46:04 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:54:41 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:54:41 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 16:57:00 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 16:57:00 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 17:00:27 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 17:00:27 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 17:00:28 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 17:00:28 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 17:00:28 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 17:00:28 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 17:00:28 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 17:00:28 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 17:00:29 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 17:00:29 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 17:03:51 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 17:03:51 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 17:33:16 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 17:33:16 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 19:47:02 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 19:47:02 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 19:58:14 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 19:58:14 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:03:50 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:31
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(31): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 31
+[04-Sep-2024 20:03:58 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:31
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(31): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 31
+[04-Sep-2024 20:04:02 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:31
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(31): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 31
+[04-Sep-2024 20:04:07 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:04:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:05:10 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:31
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(31): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 31
+[04-Sep-2024 20:14:51 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:14:51 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:14:54 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:14:54 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:15:28 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:15:28 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:16:30 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:16:30 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:17:26 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:17:26 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:20:10 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:20:10 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:23:54 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:23:54 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:24:41 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:24:41 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:24:43 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:24:43 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:24:44 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:24:44 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:24:45 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:24:45 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:24:46 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:24:46 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:24:48 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:24:48 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:24:58 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:24:58 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:25:57 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:25:57 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:26:00 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:26:00 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:27:31 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:27:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:27:36 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:38
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(38): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 38
+[04-Sep-2024 20:27:49 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:31
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(31): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 31
+[04-Sep-2024 20:27:51 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:31
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(31): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 31
+[04-Sep-2024 20:27:51 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:31
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(31): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 31
+[04-Sep-2024 20:27:51 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:31
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(31): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 31
+[04-Sep-2024 20:27:52 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:31
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(31): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 31
+[04-Sep-2024 20:27:55 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:27:55 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:32:28 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:32:28 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:32:34 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\Gajou luxe\get_products.php:38
+Stack trace:
+#0 C:\xampp\htdocs\Gajou luxe\get_products.php(38): explode(',', Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\Gajou luxe\get_products.php on line 38
+[04-Sep-2024 20:32:38 Europe/Berlin] SQL Query: SELECT * FROM products   LIMIT ? OFFSET ?
+[04-Sep-2024 20:32:38 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:45:51 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 20:45:51 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:45:59 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:46:03 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE price BETWEEN ? AND ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 20:46:03 Europe/Berlin] Parameters: Array
+(
+    [0] => 28
+    [1] => 85000
+    [2] => 12
+    [3] => 0
+)
+
+[04-Sep-2024 20:46:10 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE price BETWEEN ? AND ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 20:46:10 Europe/Berlin] Parameters: Array
+(
+    [0] => 28
+    [1] => 85000
+    [2] => 12
+    [3] => 0
+)
+
+[04-Sep-2024 20:46:18 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:47:57 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 20:47:57 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:48:00 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:48:04 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE price BETWEEN ? AND ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 20:48:04 Europe/Berlin] Parameters: Array
+(
+    [0] => 28
+    [1] => 85000
+    [2] => 12
+    [3] => 0
+)
+
+[04-Sep-2024 20:49:00 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 20:49:00 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:49:04 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:18 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:20 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:20 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:20 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:20 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:22 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:23 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:23 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:23 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:23 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:24 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:24 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:24 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:24 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:24 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:24 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:25 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:25 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:25 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:49:25 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 20:55:23 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 20:55:23 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 20:59:25 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 20:59:25 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 21:01:24 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 21:01:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 21:01:28 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 21:05:54 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 21:05:59 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE price BETWEEN ? AND ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 21:05:59 Europe/Berlin] Parameters: Array
+(
+    [0] => 28
+    [1] => 85000
+    [2] => 12
+    [3] => 0
+)
+
+[04-Sep-2024 21:06:04 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 21:06:04 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 21:38:08 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 21:38:08 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:06:31 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:06:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:06:36 Europe/Berlin] Error in get_products.php: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous
+[04-Sep-2024 23:07:02 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:07:02 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:07:56 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:07:56 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:07:57 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:07:57 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:07:58 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:07:58 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:08:00 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:08:00 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:08:02 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:08:02 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:12:18 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:12:18 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:12:41 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:12:41 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:12:43 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:12:43 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:12:45 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:12:45 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:15:56 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:15:56 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:16:02 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:16:02 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:16:04 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:16:04 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:16:05 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:16:05 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:16:06 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:16:06 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:24:46 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:24:46 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:26:36 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:26:36 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:28:13 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:28:13 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:28:18 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:28:18 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:35:39 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:35:39 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:35:41 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:35:41 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:35:52 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE subcategory_id = ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:35:52 Europe/Berlin] Parameters: Array
+(
+    [0] => 1
+    [1] => 12
+    [2] => 0
+)
+
+[04-Sep-2024 23:35:56 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE subcategory_id = ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:35:56 Europe/Berlin] Parameters: Array
+(
+    [0] => 2
+    [1] => 12
+    [2] => 0
+)
+
+[04-Sep-2024 23:36:01 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:36:01 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:36:07 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:36:07 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:36:13 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:36:13 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:36:19 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:36:19 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:36:21 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:36:21 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:36:24 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE subcategory_id = ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:36:24 Europe/Berlin] Parameters: Array
+(
+    [0] => 3
+    [1] => 12
+    [2] => 0
+)
+
+[04-Sep-2024 23:36:32 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:36:32 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:37:23 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE subcategory_id = ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:37:23 Europe/Berlin] Parameters: Array
+(
+    [0] => 2
+    [1] => 12
+    [2] => 0
+)
+
+[04-Sep-2024 23:37:28 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE subcategory_id = ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:37:28 Europe/Berlin] Parameters: Array
+(
+    [0] => 1
+    [1] => 12
+    [2] => 0
+)
+
+[04-Sep-2024 23:37:32 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:37:32 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:37:33 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE subcategory_id = ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:37:33 Europe/Berlin] Parameters: Array
+(
+    [0] => 3
+    [1] => 12
+    [2] => 0
+)
+
+[04-Sep-2024 23:37:38 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:37:38 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:39:21 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:39:21 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:39:23 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:39:23 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:39:31 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:39:31 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:39:32 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            WHERE subcategory_id = ?
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:39:32 Europe/Berlin] Parameters: Array
+(
+    [0] => 3
+    [1] => 12
+    [2] => 0
+)
+
+[04-Sep-2024 23:39:42 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:39:42 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:39:43 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:39:43 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:39:44 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:39:44 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:39:45 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:39:45 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:43:20 Europe/Berlin] SQL Query: SELECT DISTINCT products.* FROM products 
+            LEFT JOIN product_colors ON products.id = product_colors.product_id
+            LEFT JOIN product_sizes ON products.id = product_sizes.product_id
+            
+            ORDER BY products.id
+            LIMIT ? OFFSET ?
+[04-Sep-2024 23:43:20 Europe/Berlin] Parameters: Array
+(
+    [0] => 12
+    [1] => 0
+)
+
+[04-Sep-2024 23:43:26 Europe/Berlin] Error in get_products.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.category_id' in 'where clause'
+[04-Sep-2024 23:43:29 Europe/Berlin] Error in get_products.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.subcategory_id' in 'where clause'
+[04-Sep-2024 23:43:31 Europe/Berlin] Error in get_products.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.subcategory_id' in 'where clause'
+[04-Sep-2024 23:43:34 Europe/Berlin] Error in get_products.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.subcategory_id' in 'where clause'
+[06-Sep-2024 14:44:52 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 19:19:55 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 19:19:57 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 19:19:58 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 19:19:59 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 19:20:01 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 19:20:01 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 19:20:03 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 20:12:33 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 20:12:35 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 20:12:36 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 20:12:37 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 20:12:37 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 20:12:37 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 93
+[06-Sep-2024 20:18:31 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 94
+[06-Sep-2024 20:19:39 Europe/Berlin] PHP Warning:  Undefined variable $productsHtml in C:\xampp\htdocs\Gajou luxe\get_products.php on line 94
