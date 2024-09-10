@@ -6,3 +6,4 @@ The wishlist page,
 The cart and 
 Checkout page.
 This is a semester in web designing and Im putting my skills to test in languages like html, php, css, javascript and also using bootstrap.
+Expecting the best
