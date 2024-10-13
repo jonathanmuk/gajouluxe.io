@@ -30,58 +30,136 @@ if (!$product) {
 $stmt = $pdo->query("SELECT * FROM subcategories");
 $subcategories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Fetch product images
-$stmt = $pdo->prepare("SELECT * FROM product_images WHERE product_id = ?");
+// Fetch product colors with images and sizes
+$stmt = $pdo->prepare("
+    SELECT pc.*, pi.id as image_id, pi.image_path, pi.is_primary, ps.size, pv.stock_quantity
+    FROM product_colors pc
+    LEFT JOIN product_images pi ON pc.id = pi.color_id
+    LEFT JOIN product_sizes ps ON pc.id = ps.color_id
+    LEFT JOIN product_variants pv ON pc.id = pv.color_id AND ps.id = pv.size_id
+    WHERE pc.product_id = ?
+");
 $stmt->execute([$productId]);
-$productImages = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$productData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Fetch product colors
-$stmt = $pdo->prepare("SELECT * FROM product_colors WHERE product_id = ?");
-$stmt->execute([$productId]);
-$productColors = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-// Fetch product sizes
-$stmt = $pdo->prepare("SELECT * FROM product_sizes WHERE product_id = ?");
-$stmt->execute([$productId]);
-$productSizes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// Group the data by color
+$groupedProductData = [];
+foreach ($productData as $row) {
+    $colorId = $row['id'];
+    if (!isset($groupedProductData[$colorId])) {
+        $groupedProductData[$colorId] = [
+            'id' => $row['id'],
+            'color_name' => $row['color_name'],
+            'color_code' => $row['color_code'],
+            'images' => [],
+            'sizes' => []
+        ];
+    }
+    if ($row['image_id']) {
+        $groupedProductData[$colorId]['images'][] = [
+            'id' => $row['image_id'],
+            'url' => $row['image_path'],
+            'is_primary' => $row['is_primary']
+        ];
+    }
+    if ($row['size']) {
+        $groupedProductData[$colorId]['sizes'][$row['size']] = $row['stock_quantity'];
+    }
+}
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $productName = $_POST['product_name'];
-    $productDescription = $_POST['product_description'];
-    $productPrice = $_POST['product_price'];
-    $subcategoryId = $_POST['subcategory_id'];
+    // Start transaction
+    $pdo->beginTransaction();
 
-    // Update product
-    $stmt = $pdo->prepare("UPDATE products SET name = ?, description = ?, price = ?, subcategory_id = ? WHERE id = ?");
-    $stmt->execute([$productName, $productDescription, $productPrice, $subcategoryId, $productId]);
+    try {
+        // Update product details
+        $stmt = $pdo->prepare("UPDATE products SET name = ?, description = ?, price = ?, subcategory_id = ? WHERE id = ?");
+        $stmt->execute([
+            $_POST['product_name'],
+            $_POST['product_description'],
+            $_POST['product_price'],
+            $_POST['subcategory_id'],
+            $productId
+        ]);
 
-    // Handle product images (you may want to add/remove images)
+        // Get existing color IDs for this product
+        $stmt = $pdo->prepare("SELECT id FROM product_colors WHERE product_id = ?");
+        $stmt->execute([$productId]);
+        $existingColorIds = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
-    // Update colors
-    $stmt = $pdo->prepare("DELETE FROM product_colors WHERE product_id = ?");
-    $stmt->execute([$productId]);
+        // Process each variant
+        $processedColorIds = [];
+        foreach ($_POST['variants'] as $variantData) {
+            if (isset($variantData['id']) && in_array($variantData['id'], $existingColorIds)) {
+                // Update existing color
+                $stmt = $pdo->prepare("UPDATE product_colors SET color_name = ?, color_code = ? WHERE id = ?");
+                $stmt->execute([$variantData['color_name'], $variantData['color_code'], $variantData['id']]);
+                $colorId = $variantData['id'];
+            } else {
+                // Insert new color
+                $stmt = $pdo->prepare("INSERT INTO product_colors (product_id, color_name, color_code) VALUES (?, ?, ?)");
+                $stmt->execute([$productId, $variantData['color_name'], $variantData['color_code']]);
+                $colorId = $pdo->lastInsertId();
+            }
+            $processedColorIds[] = $colorId;
 
-    foreach ($_POST['colors'] as $key => $colorName) {
-        $colorCode = $_POST['color_codes'][$key];
-        $stmt = $pdo->prepare("INSERT INTO product_colors (product_id, color_name, color_code) VALUES (?, ?, ?)");
-        $stmt->execute([$productId, $colorName, $colorCode]);
+            // Delete existing images for this color
+            $stmt = $pdo->prepare("DELETE FROM product_images WHERE color_id = ?");
+            $stmt->execute([$colorId]);
+
+            // Insert new images
+            foreach ($variantData['images'] as $imageUrl) {
+                $isPrimary = ($imageUrl === $_POST['primary_image']) ? 1 : 0;
+                $stmt = $pdo->prepare("INSERT INTO product_images (product_id, color_id, image_url, is_primary) VALUES (?, ?, ?, ?)");
+                $stmt->execute([$productId, $colorId, $imageUrl, $isPrimary]);
+            }
+
+        // Delete existing sizes and variants for this color
+        $stmt = $pdo->prepare("DELETE FROM product_sizes WHERE color_id = ?");
+        $stmt->execute([$colorId]);
+        $stmt = $pdo->prepare("DELETE FROM product_variants WHERE color_id = ?");
+        $stmt->execute([$colorId]);
+
+        // Insert new sizes and variants
+        foreach ($variantData['sizes'] as $size => $quantity) {
+            if ($quantity > 0) {
+                $stmt = $pdo->prepare("INSERT INTO product_sizes (product_id, color_id, size) VALUES (?, ?, ?)");
+                $stmt->execute([$productId, $colorId, $size]);
+                $sizeId = $pdo->lastInsertId();
+
+                $stmt = $pdo->prepare("INSERT INTO product_variants (product_id, color_id, size_id, stock_quantity) VALUES (?, ?, ?, ?)");
+                $stmt->execute([$productId, $colorId, $sizeId, $quantity]);
+            }
+        }
     }
 
-    // Update sizes
-    $stmt = $pdo->prepare("DELETE FROM product_sizes WHERE product_id = ?");
-    $stmt->execute([$productId]);
+    // Delete colors that were not processed (i.e., removed by the user)
+    $colorsToDelete = array_diff($existingColorIds, $processedColorIds);
+    foreach ($colorsToDelete as $colorId) {
+        // Delete associated images, sizes, and variants first
+        $stmt = $pdo->prepare("DELETE FROM product_images WHERE color_id = ?");
+        $stmt->execute([$colorId]);
+        $stmt = $pdo->prepare("DELETE FROM product_sizes WHERE color_id = ?");
+        $stmt->execute([$colorId]);
+        $stmt = $pdo->prepare("DELETE FROM product_variants WHERE color_id = ?");
+        $stmt->execute([$colorId]);
 
-    foreach ($_POST['sizes'] as $size) {
-        $stmt = $pdo->prepare("INSERT INTO product_sizes (product_id, size) VALUES (?, ?)");
-        $stmt->execute([$productId, $size]);
+        // Now delete the color
+        $stmt = $pdo->prepare("DELETE FROM product_colors WHERE id = ?");
+        $stmt->execute([$colorId]);
     }
 
-    // Update variants (you may want to add/remove variants)
+        // Commit transaction
+        $pdo->commit();
 
-    // Redirect to the product list page
-    header('Location: admin_products.php?success=1');
-    exit;
+        header('Location: admin_products.php?success=1');
+        exit;
+    } catch (Exception $e) {
+        // Rollback transaction on error
+        $pdo->rollBack();
+        $error = "An error occurred: " . $e->getMessage();
+    }
 }
 ?>
 
@@ -94,9 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
+        body { background-color: #f8f9fa; }
         .admin-container {
             max-width: 800px;
             margin: 50px auto;
@@ -113,13 +189,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border: 1px solid #ced4da;
             border-radius: 5px;
         }
+        .image-preview {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-<a href="logout.php" class="btn btn-danger">Logout</a>
+    <a href="logout.php" class="btn btn-danger m-3">Logout</a>
     <div class="admin-container">
         <h1 class="mb-4">Edit Product</h1>
-        <form method="POST">
+        <?php if (isset($error)): ?>
+            <div class="alert alert-danger"><?php echo $error; ?></div>
+        <?php endif; ?>
+        <form method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="product_name" class="form-label">Product Name</label>
                 <input type="text" class="form-control" id="product_name" name="product_name" value="<?php echo htmlspecialchars($product['name']); ?>" required>
@@ -141,28 +227,53 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </select>
             </div>
 
-            <h3 class="mt-4">Colors</h3>
-            <div id="colorContainer">
-                <?php foreach ($productColors as $color): ?>
-                    <div class="mb-3 color-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control color-name" name="colors[]" value="<?php echo htmlspecialchars($color['color_name']); ?>" required>
-                            <input type="color" class="form-control form-control-color color-code" name="color_codes[]" value="<?php echo $color['color_code']; ?>" required>
+            <h3 class="mt-4">Colors, Images, and Sizes</h3>
+            <div id="variantContainer">
+                <?php foreach ($groupedProductData as $colorId => $colorData): ?>
+                    <div class="variant-group mb-4">
+                        <input type="hidden" name="variants[<?php echo $colorId; ?>][id]" value="<?php echo $colorId; ?>">
+                        <div class="mb-3">
+                            <label class="form-label">Color Name</label>
+                            <input type="text" class="form-control color-name" name="variants[<?php echo $colorId; ?>][color_name]" value="<?php echo htmlspecialchars($colorData['color_name']); ?>" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Color Code</label>
+                            <input type="color" class="form-control form-control-color color-code" name="variants[<?php echo $colorId; ?>][color_code]" value="<?php echo $colorData['color_code']; ?>" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Images</label>
+                            <div class="image-container">
+                                <?php foreach ($colorData['images'] as $image): ?>
+                                    <div class="image-group">
+                                        <img src="<?php echo $image['url']; ?>" class="image-preview" alt="Product Image">
+                                        <input type="hidden" name="variants[<?php echo $colorId; ?>][images][]" value="<?php echo $image['url']; ?>">
+                                        <button type="button" class="btn btn-sm btn-danger remove-image">Remove</button>
+                                        <div class="form-check">
+                                            <input class="form-check-input primary-image" type="radio" name="primary_image" value="<?php echo $image['url']; ?>" <?php echo $image['is_primary'] ? 'checked' : ''; ?>>
+                                            <label class="form-check-label">Primary Image</label>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <input type="file" class="form-control mt-2 add-image" accept="image/*" multiple>
+                        </div>
+                        <div class="mb-3">
+                            <h5>Sizes and Quantities</h5>
+                            <div class="size-container">
+                                <?php foreach ($colorData['sizes'] as $size => $quantity): ?>
+                                    <div class="input-group mb-2">
+                                        <input type="text" class="form-control size-name" name="variants[<?php echo $colorId; ?>][sizes][<?php echo $size; ?>]" value="<?php echo $size; ?>" readonly>
+                                        <input type="number" class="form-control size-quantity" name="variants[<?php echo $colorId; ?>][quantities][<?php echo $size; ?>]" value="<?php echo $quantity; ?>" min="0">
+                                        <button type="button" class="btn btn-danger remove-size">Remove</button>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <button type="button" class="btn btn-secondary add-size">Add Size</button>
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
-            <button type="button" class="btn btn-secondary mb-3" id="addColor">Add Color</button>
-
-            <h3 class="mt-4">Sizes</h3>
-            <div id="sizeContainer">
-                <?php foreach ($productSizes as $size): ?>
-                    <div class="mb-3 size-group">
-                        <input type="text" class="form-control" name="sizes[]" value="<?php echo htmlspecialchars($size['size']); ?>" required>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-            <button type="button" class="btn btn-secondary mb-3" id="addSize">Add Size</button>
+            <button type="button" class="btn btn-secondary mb-3" id="addVariant">Add Color Variant</button>
 
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary">Update Product</button>
@@ -175,16 +286,86 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#addColor').click(function() {
-                const colorGroup = $('.color-group').first().clone();
-                colorGroup.find('input').val('');
-                $('#colorContainer').append(colorGroup);
+            // Add new color variant
+            $('#addVariant').click(function() {
+                const variantGroup = $('.variant-group').first().clone();
+                variantGroup.find('input').val('');
+                variantGroup.find('.image-container').empty();
+                variantGroup.find('.size-container').empty();
+                variantGroup.find('input[name$="[id]"]').remove(); // Remove the ID field for new variants
+                const newIndex = Date.now(); // Use timestamp as a unique identifier
+                variantGroup.find('input, select').each(function() {
+                    let name = $(this).attr('name');
+                    if (name) {
+                        name = name.replace(/variants\[\d+\]/, 'variants[new_' + newIndex + ']');
+                        $(this).attr('name', name);
+                    }
+                });
+                $('#variantContainer').append(variantGroup);
             });
 
-            $('#addSize').click(function() {
-                const sizeGroup = $('.size-group').first().clone();
-                sizeGroup.find('input').val('');
-                $('#sizeContainer').append(sizeGroup);
+            // Add new size
+            $(document).on('click', '.add-size', function() {
+                const sizeContainer = $(this).siblings('.size-container');
+                const newSize = $('<div class="input-group mb-2">' +
+                    '<input type="text" class="form-control size-name" name="size_name[]" required>' +
+                    '<input type="number" class="form-control size-quantity" name="size_quantity[]" value="0" min="0">' +
+                    '<button type="button" class="btn btn-danger remove-size">Remove</button>' +
+                    '</div>');
+                sizeContainer.append(newSize);
+            });
+
+            // Remove size
+            $(document).on('click', '.remove-size', function() {
+                $(this).closest('.input-group').remove();
+            });
+
+            // Add new images
+            $(document).on('change', '.add-image', function(e) {
+                const files = e.target.files;
+                const imageContainer = $(this).siblings('.image-container');
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const newImage = $('<div class="image-group">' +
+                            '<img src="' + e.target.result + '" class="image-preview" alt="Product Image">' +
+                            '<input type="hidden" name="new_images[]" value="' + e.target.result + '">' +
+                            '<button type="button" class="btn btn-sm btn-danger remove-image">Remove</button>' +
+                            '<div class="form-check">' +
+                            '<input class="form-check-input primary-image" type="radio" name="primary_image" value="' + e.target.result + '">' +
+                            '<label class="form-check-label">Primary Image</label>' +
+                            '</div>' +
+                            '</div>');
+                        imageContainer.append(newImage);
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Remove image
+            $(document).on('click', '.remove-image', function() {
+                $(this).closest('.image-group').remove();
+            });
+
+            // Update form before submission
+            $('form').submit(function() {
+                $('.variant-group').each(function(index) {
+                    $(this).find('input, select').each(function() {
+                        let name = $(this).attr('name');
+                        if (name) {
+                            name = name.replace(/variants\[\d+\]/, 'variants[' + index + ']');
+                            $(this).attr('name', name);
+                        }
+                    });
+                });
+            });
+
+            // Ensure at least one primary image is selected
+            $(document).on('change', '.primary-image', function() {
+                if ($('.primary-image:checked').length === 0) {
+                    $(this).prop('checked', true);
+                }
             });
         });
     </script>

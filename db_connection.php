@@ -1,7 +1,7 @@
 <?php
 // Database configuration
 $host = 'localhost';     // Usually 'localhost' if the database is on the same server
-$dbname = 'gajoue';
+$dbname = 'gajou';
 $username = 'root';
 $password = '';
 

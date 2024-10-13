@@ -11,10 +11,15 @@ function getCartItemCount($pdo, $userId) {
     return $result['count'] ?? 0;
 }
 
-if (isset($_SESSION['user_id'])) {
-    $count = getCartItemCount($pdo, $_SESSION['user_id']);
-} else {
-    $count = 0;
-}
+try {
+    if (isset($_SESSION['user_id'])) {
+        $count = getCartItemCount($pdo, $_SESSION['user_id']);
+    } else {
+        $count = 0;
+    }
 
-echo json_encode(['count' => $count]);
+    echo json_encode(['count' => $count]);
+} catch (PDOException $e) {
+    error_log("Cart count error: " . $e->getMessage());
+    echo json_encode(['error' => 'An error occurred while fetching the cart count.', 'count' => 0]);
+}

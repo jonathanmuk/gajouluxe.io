@@ -398,7 +398,7 @@ function getWishlistItemCount() {
         <div class="header-content">
             <a href="index.php" class="company-name">Gajou Luxe</a>
             <nav class="nav-buttons">
-                <a class="nav-link" href="homepage.html">Home</a>
+                <a class="nav-link" href="homepage.php">Home</a>
                 <a class="nav-link" href="products.php">Products</a> 
                 <a href="<?php echo isset($_SESSION['user_id']) ? 'wishlist.php' : 'login.php'; ?>" class="nav-link wishlist-icon">
                     <img src="icons/heart.png" alt="wishlist" class="flaticon">

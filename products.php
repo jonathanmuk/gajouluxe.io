@@ -406,7 +406,7 @@ function getCartItemCount() {
         <div class="header-content">
             <a href="index.php" class="company-name">Gajou Luxe</a>
             <nav class="nav-buttons">
-                <a class="nav-link" href="homepage.html">Home</a>
+                <a class="nav-link" href="homepage.php">Home</a>
                 <a class="nav-link" href="products.php">Products</a>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="wishlist.php" class="icon-button">

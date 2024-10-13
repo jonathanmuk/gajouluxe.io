@@ -189,9 +189,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="header-content">
                 <div class="company-name">Gajou Luxe</div>
                 <nav class="nav-buttons">
-                    <a class="nav-link" href="index.php">Home</a>
+                    <a class="nav-link" href="homepage.php">Home</a>
                     <a class="nav-link" href="products.php">Products</a>
-                    <a class="nav-link" href="#about">About</a>
                     <a class="nav-link" href="#contact">Contact</a>
                     <a href="cart.php" class="icon-button">
                         <span class="material-icons">shopping_cart</span>
