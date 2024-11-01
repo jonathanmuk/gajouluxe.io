@@ -1,0 +1,548 @@
+[2024-10-10 18:12:27] Starting product insertion process
+[2024-10-10 18:12:27] Transaction started
+[2024-10-10 18:12:27] Product data: {"product_name":"sample 2","product_description":"nsja cdjbcd","product_price":"29000","sale_price":"","is_new":"on","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"1","XL":"1"}}],"primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-10 18:18:43] Starting product insertion process
+[2024-10-10 18:18:43] Transaction started
+[2024-10-10 18:18:43] Product data: {"product_name":"food","product_description":"kjbjcj SJB","product_price":"20000","sale_price":"","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"black","color_code":"#000000","sizes":{"S":"0","M":"0","L":"0","XL":"0"}}],"primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-10 18:18:44] Product inserted with ID: 21
+[2024-10-10 18:18:44] Processing variant: {"color_name":"black","color_code":"#000000","sizes":{"S":"0","M":"0","L":"0","XL":"0"}}
+[2024-10-10 18:18:44] Transaction rolled back due to error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_path' in 'field list'
+[2024-10-10 18:56:39] Starting product insertion process
+[2024-10-10 18:56:39] Transaction started
+[2024-10-10 18:56:39] Product data: {"product_name":"shhsss","product_description":"ihbfrnk kjbrf","product_price":"30000","sale_price":"","is_new":"on","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"black","color_code":"#000000","sizes":{"S":"1","M":"1","L":"1","XL":"1"}}],"primary_image_variant":"0","primary_image_index":"NaN"}
+[2024-10-10 18:56:39] Product inserted with ID: 22
+[2024-10-10 18:56:39] Processing variant: {"color_name":"black","color_code":"#000000","sizes":{"S":"1","M":"1","L":"1","XL":"1"}}
+[2024-10-10 18:56:39] Transaction rolled back due to error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'size_id' in 'field list'
+[2024-10-10 19:06:28] Starting product insertion process
+[2024-10-10 19:06:28] Transaction started
+[2024-10-10 19:06:28] Product data: {"product_name":"new item","product_description":"jshbs jcbw","product_price":"12000","sale_price":"","is_new":"on","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"2","XL":"2"}}],"primary_image_variant":"0","primary_image_index":"NaN"}
+[2024-10-10 19:06:28] Product inserted with ID: 23
+[2024-10-10 19:06:28] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"2","XL":"2"}}
+[2024-10-10 19:06:28] Transaction rolled back due to error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'size_id' in 'field list'
+[2024-10-10 19:27:28] Starting product insertion process
+[2024-10-10 19:27:28] Transaction started
+[2024-10-10 19:27:28] Product data: {"product_name":"skkrr","product_description":"jdbbc wncjw","product_price":"12000","sale_price":"","category_id":"3","subcategory_id":"3","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"1","M":"1","L":"1","XL":"1"}}],"primary_image_variant":"0","primary_image_index":"NaN"}
+[2024-10-10 19:27:28] Product inserted with ID: 24
+[2024-10-10 19:27:28] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"1","M":"1","L":"1","XL":"1"}}
+[2024-10-10 19:27:28] Processing size: S with quantity: 1
+[2024-10-10 19:27:28] New size inserted with ID: 2
+[2024-10-10 19:27:28] New variant inserted for size: S with quantity: 1
+[2024-10-10 19:27:28] Processing size: M with quantity: 1
+[2024-10-10 19:27:28] New size inserted with ID: 3
+[2024-10-10 19:27:28] New variant inserted for size: M with quantity: 1
+[2024-10-10 19:27:28] Processing size: L with quantity: 1
+[2024-10-10 19:27:28] New size inserted with ID: 4
+[2024-10-10 19:27:28] New variant inserted for size: L with quantity: 1
+[2024-10-10 19:27:28] Processing size: XL with quantity: 1
+[2024-10-10 19:27:28] New size inserted with ID: 5
+[2024-10-10 19:27:28] New variant inserted for size: XL with quantity: 1
+[2024-10-10 19:27:28] Transaction committed successfully
+[2024-10-10 19:39:20] Starting product insertion process
+[2024-10-10 19:39:20] Transaction started
+[2024-10-10 19:39:20] Product data: {"product_name":"freddos","product_description":"jdbb dcucbi","product_price":"22000","sale_price":"","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"2","XL":"3"}}],"primary_image_variant":"0","primary_image_index":"NaN"}
+[2024-10-10 19:39:20] Product inserted with ID: 25
+[2024-10-10 19:39:20] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"2","XL":"3"}}
+[2024-10-10 19:39:20] No images found for variant 0
+[2024-10-10 19:39:20] Processing size: S with quantity: 2
+[2024-10-10 19:39:20] New size inserted with ID: 6
+[2024-10-10 19:39:20] New variant inserted for size: S with quantity: 2
+[2024-10-10 19:39:20] Processing size: M with quantity: 2
+[2024-10-10 19:39:20] New size inserted with ID: 7
+[2024-10-10 19:39:20] New variant inserted for size: M with quantity: 2
+[2024-10-10 19:39:20] Processing size: L with quantity: 2
+[2024-10-10 19:39:20] New size inserted with ID: 8
+[2024-10-10 19:39:20] New variant inserted for size: L with quantity: 2
+[2024-10-10 19:39:20] Processing size: XL with quantity: 3
+[2024-10-10 19:39:20] New size inserted with ID: 9
+[2024-10-10 19:39:20] New variant inserted for size: XL with quantity: 3
+[2024-10-10 19:39:20] Transaction committed successfully
+[2024-10-10 19:49:19] Starting product insertion process
+[2024-10-10 19:49:19] Transaction started
+[2024-10-10 19:49:19] Product data: {"product_name":"comeon","product_description":"pliis","product_price":"20000","sale_price":"","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"black","color_code":"#000000","sizes":{"S":"1","M":"1","L":"3","XL":"0"}}],"primary_image_variant":"0","primary_image_index":"NaN"}
+[2024-10-10 19:49:19] Product inserted with ID: 26
+[2024-10-10 19:49:19] Processing variant: {"color_name":"black","color_code":"#000000","sizes":{"S":"1","M":"1","L":"3","XL":"0"}}
+[2024-10-10 19:49:19] Processing 1 images for variant 0
+[2024-10-10 19:49:19] Attempting to move uploaded file: C:\xampp\tmp\phpDF47.tmp to uploads/products/6708139f36e08.jpg
+[2024-10-10 19:49:19] Transaction rolled back due to error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_path' in 'field list'
+[2024-10-10 20:07:34] Starting product insertion process
+[2024-10-10 20:07:34] Transaction started
+[2024-10-10 20:07:34] Product data: {"product_name":"Let's see","product_description":"clkswnjn dcun","product_price":"22000","sale_price":"","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"1","M":"0","L":"0","XL":"0"}}],"primary_image_variant":"0","primary_image_index":"NaN"}
+[2024-10-10 20:07:34] Product inserted with ID: 27
+[2024-10-10 20:07:34] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"1","M":"0","L":"0","XL":"0"}}
+[2024-10-10 20:07:34] Processing 1 images for variant 0
+[2024-10-10 20:07:34] Attempting to move uploaded file: C:\xampp\tmp\php9349.tmp to uploads/products/670817e622e97.jpg
+[2024-10-10 20:07:34] Image inserted: uploads/products/670817e622e97.jpg
+[2024-10-10 20:07:34] Color updated with image: uploads/products/670817e622e97.jpg
+[2024-10-10 20:07:34] Processing size: S with quantity: 1
+[2024-10-10 20:07:34] New size inserted with ID: 10
+[2024-10-10 20:07:34] New variant inserted for size: S with quantity: 1
+[2024-10-10 20:07:34] Transaction committed successfully
+[2024-10-10 20:30:52] Starting product insertion process
+[2024-10-10 20:30:52] Transaction started
+[2024-10-10 20:30:52] Product data: {"product_name":"gfriu","product_description":"ksbvda bdic","product_price":"21000","sale_price":"","category_id":"3","subcategory_id":"3","product_type":"color","variants":[{"color_name":"black","color_code":"#000000","sizes":{"S":"0","M":"2","L":"3","XL":"1"}}],"primary_image_variant":"0","primary_image_index":"NaN"}
+[2024-10-10 20:30:52] Product inserted with ID: 28
+[2024-10-10 20:30:52] Processing variant: {"color_name":"black","color_code":"#000000","sizes":{"S":"0","M":"2","L":"3","XL":"1"}}
+[2024-10-10 20:30:52] Processing 1 images for variant 0
+[2024-10-10 20:30:52] Attempting to move uploaded file: C:\xampp\tmp\phpEC32.tmp to uploads/products/67081d5cdc06c.jpg
+[2024-10-10 20:30:52] Image inserted: uploads/products/67081d5cdc06c.jpg
+[2024-10-10 20:30:52] Color updated with image: uploads/products/67081d5cdc06c.jpg
+[2024-10-10 20:30:52] Processing size: M with quantity: 2
+[2024-10-10 20:30:52] New size inserted with ID: 11
+[2024-10-10 20:30:52] New variant inserted for size: M with quantity: 2
+[2024-10-10 20:30:52] Processing size: L with quantity: 3
+[2024-10-10 20:30:52] New size inserted with ID: 12
+[2024-10-10 20:30:52] New variant inserted for size: L with quantity: 3
+[2024-10-10 20:30:52] Processing size: XL with quantity: 1
+[2024-10-10 20:30:52] New size inserted with ID: 13
+[2024-10-10 20:30:52] New variant inserted for size: XL with quantity: 1
+[2024-10-10 20:30:52] No primary image path set for product ID: 28
+[2024-10-10 20:30:52] Transaction committed successfully
+[2024-10-11 06:53:11] Starting product insertion process
+[2024-10-11 06:53:11] Transaction started
+[2024-10-11 06:53:11] Product data: {"product_name":"morning","product_description":"good description","product_price":"12000","sale_price":"","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"2","XL":"0"}}],"primary_image_variant":"0,0","primary_image_index":""}
+[2024-10-11 06:53:11] Product inserted with ID: 29
+[2024-10-11 06:53:11] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"2","XL":"0"}}
+[2024-10-11 06:53:11] Color inserted with ID: 36
+[2024-10-11 06:53:11] Processing 1 images for variant 0
+[2024-10-11 06:53:11] Attempting to move uploaded file: C:\xampp\tmp\php6AC0.tmp to uploads/products/6708af37dc60a.jpg
+[2024-10-11 06:53:11] Image inserted: uploads/products/6708af37dc60a.jpg
+[2024-10-11 06:53:11] Color updated with image: uploads/products/6708af37dc60a.jpg
+[2024-10-11 06:53:11] Processing size: S with quantity: 2
+[2024-10-11 06:53:11] New size inserted with ID: 14
+[2024-10-11 06:53:11] New variant inserted for size: S with quantity: 2
+[2024-10-11 06:53:11] Processing size: M with quantity: 2
+[2024-10-11 06:53:11] New size inserted with ID: 15
+[2024-10-11 06:53:11] New variant inserted for size: M with quantity: 2
+[2024-10-11 06:53:11] Processing size: L with quantity: 2
+[2024-10-11 06:53:11] New size inserted with ID: 16
+[2024-10-11 06:53:12] New variant inserted for size: L with quantity: 2
+[2024-10-11 06:53:12] No primary image path set for product ID: 29
+[2024-10-11 06:53:12] Transaction committed successfully
+[2024-10-11 07:20:20] Starting product insertion process
+[2024-10-11 07:20:20] Transaction started
+[2024-10-11 07:20:20] Product data: {"product_name":"morning2","product_description":"another one","product_price":"120000","sale_price":"","category_id":"3","subcategory_id":"3","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"3","XL":"5"}}],"primary_image_variant":"0,0","primary_image_index":""}
+[2024-10-11 07:20:20] Product inserted with ID: 30
+[2024-10-11 07:20:20] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"3","XL":"5"}}
+[2024-10-11 07:20:20] Color inserted with ID: 37
+[2024-10-11 07:20:20] Processing 1 images for variant 0
+[2024-10-11 07:20:20] Attempting to move uploaded file: C:\xampp\tmp\php44E0.tmp to uploads/products/6708b594b786d.jpg
+[2024-10-11 07:20:20] Image inserted: uploads/products/6708b594b786d.jpg
+[2024-10-11 07:20:20] Color updated with image: uploads/products/6708b594b786d.jpg
+[2024-10-11 07:20:20] Processing size: S with quantity: 2
+[2024-10-11 07:20:20] New size inserted with ID: 17
+[2024-10-11 07:20:20] New variant inserted for size: S with quantity: 2
+[2024-10-11 07:20:20] Processing size: M with quantity: 2
+[2024-10-11 07:20:20] New size inserted with ID: 18
+[2024-10-11 07:20:20] New variant inserted for size: M with quantity: 2
+[2024-10-11 07:20:20] Processing size: L with quantity: 3
+[2024-10-11 07:20:20] New size inserted with ID: 19
+[2024-10-11 07:20:20] New variant inserted for size: L with quantity: 3
+[2024-10-11 07:20:20] Processing size: XL with quantity: 5
+[2024-10-11 07:20:20] New size inserted with ID: 20
+[2024-10-11 07:20:20] New variant inserted for size: XL with quantity: 5
+[2024-10-11 07:20:20] No primary image path set for product ID: 30
+[2024-10-11 07:20:20] Transaction committed successfully
+[2024-10-11 07:37:20] Starting product insertion process
+[2024-10-11 07:37:20] Transaction started
+[2024-10-11 07:37:20] Product data: {"product_name":"Morning test3","product_description":"ojkkcx klen kenc","product_price":"12000","sale_price":"","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"0","L":"0","XL":"0"}}],"primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-11 07:37:20] Product inserted with ID: 31
+[2024-10-11 07:37:20] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"0","L":"0","XL":"0"}}
+[2024-10-11 07:37:20] Color inserted with ID: 38
+[2024-10-11 07:37:20] Processing 1 images for variant 0
+[2024-10-11 07:37:20] Attempting to move uploaded file: C:\xampp\tmp\phpD63B.tmp to uploads/products/6708b990c860f.jpg
+[2024-10-11 07:37:20] Image inserted: uploads/products/6708b990c860f.jpg
+[2024-10-11 07:37:20] Primary image set: uploads/products/6708b990c860f.jpg
+[2024-10-11 07:37:20] Color updated with image: uploads/products/6708b990c860f.jpg
+[2024-10-11 07:37:20] Processing size: S with quantity: 2
+[2024-10-11 07:37:20] New size inserted with ID: 21
+[2024-10-11 07:37:20] New variant inserted for size: S with quantity: 2
+[2024-10-11 07:37:20] No primary image selected for product ID: 31
+[2024-10-11 07:37:20] Transaction committed successfully
+[2024-10-11 07:52:44] Starting product insertion process
+[2024-10-11 07:52:44] Transaction started
+[2024-10-11 07:52:44] Product data: {"product_name":"morning 3","product_description":"ok okay","product_price":"20000","sale_price":"","category_id":"2","subcategory_id":"2","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"3","L":"0","XL":"0"}}],"primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-11 07:52:44] Product inserted with ID: 32
+[2024-10-11 07:52:44] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"3","L":"0","XL":"0"}}
+[2024-10-11 07:52:44] Color inserted with ID: 39
+[2024-10-11 07:52:44] Processing 1 images for variant 0
+[2024-10-11 07:52:44] Attempting to move uploaded file: C:\xampp\tmp\phpEE73.tmp to uploads/products/6708bd2cd0532.jpg
+[2024-10-11 07:52:44] Image inserted: uploads/products/6708bd2cd0532.jpg
+[2024-10-11 07:52:44] Primary image set: uploads/products/6708bd2cd0532.jpg
+[2024-10-11 07:52:44] Color updated with image: uploads/products/6708bd2cd0532.jpg
+[2024-10-11 07:52:44] Processing size: S with quantity: 2
+[2024-10-11 07:52:44] New size inserted with ID: 22
+[2024-10-11 07:52:44] New variant inserted for size: S with quantity: 2
+[2024-10-11 07:52:44] Processing size: M with quantity: 3
+[2024-10-11 07:52:44] New size inserted with ID: 23
+[2024-10-11 07:52:44] New variant inserted for size: M with quantity: 3
+[2024-10-11 07:52:44] No primary image selected for product ID: 32
+[2024-10-11 07:52:44] Transaction committed successfully
+[2024-10-11 08:06:07] Starting product insertion process
+[2024-10-11 08:06:07] Transaction started
+[2024-10-11 08:06:07] Product data: {"product_name":"morning 4","product_description":"bla bla bla","product_price":"22000","sale_price":"","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"0","M":"2","L":"0","XL":"0"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-11 08:06:07] Product inserted with ID: 33
+[2024-10-11 08:06:07] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"0","M":"2","L":"0","XL":"0"}}
+[2024-10-11 08:06:07] Color inserted with ID: 40
+[2024-10-11 08:06:07] Processing 1 images for variant 0
+[2024-10-11 08:06:07] Attempting to move uploaded file: C:\xampp\tmp\php2E13.tmp to uploads/products/6708c04f48af1.jpg
+[2024-10-11 08:06:07] Image inserted: uploads/products/6708c04f48af1.jpg
+[2024-10-11 08:06:07] Primary image set: uploads/products/6708c04f48af1.jpg
+[2024-10-11 08:06:07] Color updated with image: uploads/products/6708c04f48af1.jpg
+[2024-10-11 08:06:07] Processing size: M with quantity: 2
+[2024-10-11 08:06:07] New size inserted with ID: 24
+[2024-10-11 08:06:07] New variant inserted for size: M with quantity: 2
+[2024-10-11 08:06:07] Primary image data: variant=0, index=0
+[2024-10-11 08:06:07] Product updated with primary image: uploads/products/6708c04f56551.jpg
+[2024-10-11 08:06:07] Transaction committed successfully
+[2024-10-13 11:43:25] Starting product insertion process
+[2024-10-13 11:43:25] Transaction started
+[2024-10-13 11:43:25] Product data: {"product_name":"Green skirt","product_description":"Goof for all occassions","product_price":"45000","sale_price":"","is_new":"on","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Green","color_code":"#5e733d","sizes":{"S":"2","M":"3","L":"4","XL":"5"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-13 11:43:25] Product inserted with ID: 34
+[2024-10-13 11:43:25] Processing variant: {"color_name":"Green","color_code":"#5e733d","sizes":{"S":"2","M":"3","L":"4","XL":"5"}}
+[2024-10-13 11:43:25] Color inserted with ID: 41
+[2024-10-13 11:43:25] Processing 1 images for variant 0
+[2024-10-13 11:43:25] Attempting to move uploaded file: C:\xampp\tmp\phpDB97.tmp to uploads/products/670b963d1c5ba.jpg
+[2024-10-13 11:43:25] Image inserted: uploads/products/670b963d1c5ba.jpg
+[2024-10-13 11:43:25] Primary image set: uploads/products/670b963d1c5ba.jpg
+[2024-10-13 11:43:25] Color updated with image: uploads/products/670b963d1c5ba.jpg
+[2024-10-13 11:43:25] Processing size: S with quantity: 2
+[2024-10-13 11:43:25] New size inserted with ID: 25
+[2024-10-13 11:43:25] New variant inserted for size: S with quantity: 2
+[2024-10-13 11:43:25] Processing size: M with quantity: 3
+[2024-10-13 11:43:25] New size inserted with ID: 26
+[2024-10-13 11:43:25] New variant inserted for size: M with quantity: 3
+[2024-10-13 11:43:25] Processing size: L with quantity: 4
+[2024-10-13 11:43:25] New size inserted with ID: 27
+[2024-10-13 11:43:25] New variant inserted for size: L with quantity: 4
+[2024-10-13 11:43:25] Processing size: XL with quantity: 5
+[2024-10-13 11:43:25] New size inserted with ID: 28
+[2024-10-13 11:43:25] New variant inserted for size: XL with quantity: 5
+[2024-10-13 11:43:25] Primary image data: variant=0, index=0
+[2024-10-13 11:43:25] Product updated with primary image: uploads/products/670b963d23c0a.jpg
+[2024-10-13 11:43:25] Transaction committed successfully
+[2024-10-13 16:50:05] Starting product insertion process
+[2024-10-13 16:50:05] Transaction started
+[2024-10-13 16:50:05] Product data: {"product_name":"new one","product_description":"this is a new item","product_price":"15000","sale_price":"","category_id":"2","subcategory_id":"2","product_type":"color","variants":[{"color_name":"black","color_code":"#000000","sizes":{"S":"0","M":"2","L":"0","XL":"0"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-13 16:50:05] Product inserted with ID: 35
+[2024-10-13 16:50:05] Processing variant: {"color_name":"black","color_code":"#000000","sizes":{"S":"0","M":"2","L":"0","XL":"0"}}
+[2024-10-13 16:50:05] Color inserted with ID: 42
+[2024-10-13 16:50:05] Processing 1 images for variant 0
+[2024-10-13 16:50:05] Attempting to move uploaded file: C:\xampp\tmp\php9EB7.tmp to uploads/products/670bde1d276e5.jpg
+[2024-10-13 16:50:05] Image inserted: 670bde1d276e5.jpg
+[2024-10-13 16:50:05] Primary image set: 670bde1d276e5.jpg
+[2024-10-13 16:50:05] Color updated with image: 670bde1d276e5.jpg
+[2024-10-13 16:50:05] Processing size: M with quantity: 2
+[2024-10-13 16:50:05] New size inserted with ID: 29
+[2024-10-13 16:50:05] New variant inserted for size: M with quantity: 2
+[2024-10-13 16:50:05] Primary image data: variant=0, index=0
+[2024-10-13 16:50:05] Product updated with primary image: 670bde1d32bd5.jpg
+[2024-10-13 16:50:05] Transaction committed successfully
+[2024-10-14 12:49:29] Starting product insertion process
+[2024-10-14 12:49:29] Transaction started
+[2024-10-14 12:49:29] Product data: {"product_name":"mondayyy","product_description":"mondayyy","product_price":"20000","sale_price":"","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"0","L":"0","XL":"0"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-14 12:49:29] Product inserted with ID: 36
+[2024-10-14 12:49:29] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"0","L":"0","XL":"0"}}
+[2024-10-14 12:49:29] Color inserted with ID: 43
+[2024-10-14 12:49:29] Processing 1 images for variant 0
+[2024-10-14 12:49:29] Attempting to move uploaded file: C:\xampp\tmp\phpEAC4.tmp to uploads/products/670cf739cd09c.jpg
+[2024-10-14 12:49:29] Image inserted: uploads/products/670cf739cd09c.jpg
+[2024-10-14 12:49:29] Primary image set: uploads/products/670cf739cd09c.jpg
+[2024-10-14 12:49:29] Color updated with image: uploads/products/670cf739cd09c.jpg
+[2024-10-14 12:49:29] Processing size: S with quantity: 2
+[2024-10-14 12:49:29] New size inserted with ID: 30
+[2024-10-14 12:49:29] New variant inserted for size: S with quantity: 2
+[2024-10-14 12:49:29] Primary image data: variant=0, index=0
+[2024-10-14 12:49:29] Product updated with primary image: uploads/products/670cf739cd09c.jpg
+[2024-10-14 12:49:29] Transaction committed successfully
+[2024-10-14 13:04:50] Starting product insertion process
+[2024-10-14 13:04:50] Transaction started
+[2024-10-14 13:04:50] Product data: {"product_name":"Monday jackets","product_description":"monday jackets","product_price":"60000","sale_price":"","category_id":"2","subcategory_id":"2","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"4","XL":"4"}},{"color_name":"Pale blue","color_code":"#84aad1","sizes":{"S":"","M":"3","L":"","XL":""}},{"color_name":"Semi-pale blue","color_code":"#6b95c6","sizes":{"S":"","M":"","L":"3","XL":""}},{"color_name":"Dark Blue","color_code":"#2d4d74","sizes":{"S":"","M":"3","L":"2","XL":""}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-14 13:04:50] Product inserted with ID: 37
+[2024-10-14 13:04:50] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"2","M":"2","L":"4","XL":"4"}}
+[2024-10-14 13:04:50] Color inserted with ID: 44
+[2024-10-14 13:04:50] Processing 2 images for variant 0
+[2024-10-14 13:04:50] Attempting to move uploaded file: C:\xampp\tmp\phpF6B7.tmp to uploads/products/670cfad261765.jpg
+[2024-10-14 13:04:50] Image inserted: uploads/products/670cfad261765.jpg
+[2024-10-14 13:04:50] Primary image set: uploads/products/670cfad261765.jpg
+[2024-10-14 13:04:50] Color updated with image: uploads/products/670cfad261765.jpg
+[2024-10-14 13:04:50] Attempting to move uploaded file: C:\xampp\tmp\phpF6D7.tmp to uploads/products/670cfad2642b3.jpg
+[2024-10-14 13:04:50] Image inserted: uploads/products/670cfad2642b3.jpg
+[2024-10-14 13:04:50] Processing size: S with quantity: 2
+[2024-10-14 13:04:50] New size inserted with ID: 31
+[2024-10-14 13:04:50] New variant inserted for size: S with quantity: 2
+[2024-10-14 13:04:50] Processing size: M with quantity: 2
+[2024-10-14 13:04:50] New size inserted with ID: 32
+[2024-10-14 13:04:50] New variant inserted for size: M with quantity: 2
+[2024-10-14 13:04:50] Processing size: L with quantity: 4
+[2024-10-14 13:04:50] New size inserted with ID: 33
+[2024-10-14 13:04:50] New variant inserted for size: L with quantity: 4
+[2024-10-14 13:04:50] Processing size: XL with quantity: 4
+[2024-10-14 13:04:50] New size inserted with ID: 34
+[2024-10-14 13:04:50] New variant inserted for size: XL with quantity: 4
+[2024-10-14 13:04:50] Processing variant: {"color_name":"Pale blue","color_code":"#84aad1","sizes":{"S":"","M":"3","L":"","XL":""}}
+[2024-10-14 13:04:50] Color inserted with ID: 45
+[2024-10-14 13:04:50] Processing 1 images for variant 1
+[2024-10-14 13:04:50] Attempting to move uploaded file: C:\xampp\tmp\phpF6D8.tmp to uploads/products/670cfad26e760.jpg
+[2024-10-14 13:04:50] Image inserted: uploads/products/670cfad26e760.jpg
+[2024-10-14 13:04:50] Color updated with image: uploads/products/670cfad26e760.jpg
+[2024-10-14 13:04:50] Processing size: M with quantity: 3
+[2024-10-14 13:04:50] New size inserted with ID: 35
+[2024-10-14 13:04:50] New variant inserted for size: M with quantity: 3
+[2024-10-14 13:04:50] Processing variant: {"color_name":"Semi-pale blue","color_code":"#6b95c6","sizes":{"S":"","M":"","L":"3","XL":""}}
+[2024-10-14 13:04:50] Color inserted with ID: 46
+[2024-10-14 13:04:50] Processing 1 images for variant 2
+[2024-10-14 13:04:50] Attempting to move uploaded file: C:\xampp\tmp\phpF6E9.tmp to uploads/products/670cfad26fbfc.jpg
+[2024-10-14 13:04:50] Image inserted: uploads/products/670cfad26fbfc.jpg
+[2024-10-14 13:04:50] Color updated with image: uploads/products/670cfad26fbfc.jpg
+[2024-10-14 13:04:50] Processing size: L with quantity: 3
+[2024-10-14 13:04:50] New size inserted with ID: 36
+[2024-10-14 13:04:50] New variant inserted for size: L with quantity: 3
+[2024-10-14 13:04:50] Processing variant: {"color_name":"Dark Blue","color_code":"#2d4d74","sizes":{"S":"","M":"3","L":"2","XL":""}}
+[2024-10-14 13:04:50] Color inserted with ID: 47
+[2024-10-14 13:04:50] Processing 1 images for variant 3
+[2024-10-14 13:04:50] Attempting to move uploaded file: C:\xampp\tmp\phpF6EA.tmp to uploads/products/670cfad270ee5.jpg
+[2024-10-14 13:04:50] Image inserted: uploads/products/670cfad270ee5.jpg
+[2024-10-14 13:04:50] Color updated with image: uploads/products/670cfad270ee5.jpg
+[2024-10-14 13:04:50] Processing size: M with quantity: 3
+[2024-10-14 13:04:50] New size inserted with ID: 37
+[2024-10-14 13:04:50] New variant inserted for size: M with quantity: 3
+[2024-10-14 13:04:50] Processing size: L with quantity: 2
+[2024-10-14 13:04:50] New size inserted with ID: 38
+[2024-10-14 13:04:50] New variant inserted for size: L with quantity: 2
+[2024-10-14 13:04:50] Primary image data: variant=0, index=0
+[2024-10-14 13:04:50] Product updated with primary image: uploads/products/670cfad261765.jpg
+[2024-10-14 13:04:50] Transaction committed successfully
+[2024-10-30 08:29:47] Starting product insertion process
+[2024-10-30 08:29:47] Transaction started
+[2024-10-30 08:29:47] Product data: {"product_name":"The Roadrunner Classic","product_description":"A timeless indigo denim trucker jacket featuring vintage-style copper buttons, dual chest pockets, and naturally distressed edges. The mid-weight 12oz denim develops beautiful personal wear patterns over time, making each piece uniquely yours.","product_price":"75000","sale_price":"","is_new":"on","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"0","M":"3","L":"3","XL":"0"}},{"color_name":"Medium blue wash","color_code":"#648fd0","sizes":{"S":"","M":"2","L":"2","XL":"2"}},{"color_name":"Pale Blue","color_code":"#9fbdd8","sizes":{"S":"2","M":"2","L":"","XL":""}},{"color_name":"Dark Blue","color_code":"#334d72","sizes":{"S":"4","M":"","L":"2","XL":"2"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-30 08:29:48] Transaction rolled back due to error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_sale' in 'field list'
+[2024-10-30 13:32:15] Starting product insertion process
+[2024-10-30 13:44:43] Starting product insertion process
+[2024-10-30 13:44:44] Transaction started
+[2024-10-30 13:44:44] Product data: {"product_name":"Testing 1","product_description":"My cool description","product_price":"50000","sale_price":"","is_new":"on","category_id":"1","subcategory_id":"1","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"5","M":"2","L":"2","XL":"0"}},{"color_name":"Pale blue","color_code":"#92b3d5","sizes":{"S":"","M":"3","L":"","XL":""}},{"color_name":"Medium wash blue","color_code":"#6187c7","sizes":{"S":"","M":"2","L":"2","XL":""}},{"color_name":"Dark Blue","color_code":"#324975","sizes":{"S":"2","M":"2","L":"2","XL":"2"}}],"primary_image":"0,1","primary_image_variant":"0","primary_image_index":"1"}
+[2024-10-30 13:44:44] Product inserted with ID: 1
+[2024-10-30 13:44:44] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"5","M":"2","L":"2","XL":"0"}}
+[2024-10-30 13:44:45] Color inserted with ID: 1
+[2024-10-30 13:44:45] Processing 2 images for variant 0
+[2024-10-30 13:44:45] Attempting to move uploaded file: C:\xampp\tmp\php9CE3.tmp to uploads/products/67222a3d52746.jpg
+[2024-10-30 13:44:45] Image inserted: uploads/products/67222a3d52746.jpg
+[2024-10-30 13:44:46] Color updated with image: uploads/products/67222a3d52746.jpg
+[2024-10-30 13:44:46] Attempting to move uploaded file: C:\xampp\tmp\php9CE4.tmp to uploads/products/67222a3e31d91.jpg
+[2024-10-30 13:44:46] Image inserted: uploads/products/67222a3e31d91.jpg
+[2024-10-30 13:44:46] Primary image set: uploads/products/67222a3e31d91.jpg
+[2024-10-30 13:44:46] Processing size: S with quantity: 5
+[2024-10-30 13:44:47] New size inserted with ID: 1
+[2024-10-30 13:44:49] New variant inserted for size: S with quantity: 5
+[2024-10-30 13:44:49] Processing size: M with quantity: 2
+[2024-10-30 13:44:51] New size inserted with ID: 2
+[2024-10-30 13:44:51] New variant inserted for size: M with quantity: 2
+[2024-10-30 13:44:51] Processing size: L with quantity: 2
+[2024-10-30 13:44:52] New size inserted with ID: 3
+[2024-10-30 13:44:53] New variant inserted for size: L with quantity: 2
+[2024-10-30 13:44:53] Processing variant: {"color_name":"Pale blue","color_code":"#92b3d5","sizes":{"S":"","M":"3","L":"","XL":""}}
+[2024-10-30 13:44:54] Color inserted with ID: 2
+[2024-10-30 13:44:54] Processing 1 images for variant 1
+[2024-10-30 13:44:54] Attempting to move uploaded file: C:\xampp\tmp\php9F47.tmp to uploads/products/67222a4638d79.jpg
+[2024-10-30 13:44:54] Image inserted: uploads/products/67222a4638d79.jpg
+[2024-10-30 13:44:54] Color updated with image: uploads/products/67222a4638d79.jpg
+[2024-10-30 13:44:54] Processing size: M with quantity: 3
+[2024-10-30 13:44:55] New size inserted with ID: 4
+[2024-10-30 13:44:56] New variant inserted for size: M with quantity: 3
+[2024-10-30 13:44:56] Processing variant: {"color_name":"Medium wash blue","color_code":"#6187c7","sizes":{"S":"","M":"2","L":"2","XL":""}}
+[2024-10-30 13:44:56] Color inserted with ID: 3
+[2024-10-30 13:44:57] Processing 1 images for variant 2
+[2024-10-30 13:44:57] Attempting to move uploaded file: C:\xampp\tmp\php9F48.tmp to uploads/products/67222a491fb80.jpg
+[2024-10-30 13:44:57] Image inserted: uploads/products/67222a491fb80.jpg
+[2024-10-30 13:44:57] Color updated with image: uploads/products/67222a491fb80.jpg
+[2024-10-30 13:44:57] Processing size: M with quantity: 2
+[2024-10-30 13:44:58] New size inserted with ID: 5
+[2024-10-30 13:44:59] New variant inserted for size: M with quantity: 2
+[2024-10-30 13:44:59] Processing size: L with quantity: 2
+[2024-10-30 13:45:00] New size inserted with ID: 6
+[2024-10-30 13:45:01] New variant inserted for size: L with quantity: 2
+[2024-10-30 13:45:01] Processing variant: {"color_name":"Dark Blue","color_code":"#324975","sizes":{"S":"2","M":"2","L":"2","XL":"2"}}
+[2024-10-30 13:45:01] Color inserted with ID: 4
+[2024-10-30 13:45:01] Processing 1 images for variant 3
+[2024-10-30 13:45:01] Attempting to move uploaded file: C:\xampp\tmp\php9F49.tmp to uploads/products/67222a4da6e7e.jpg
+[2024-10-30 13:45:02] Image inserted: uploads/products/67222a4da6e7e.jpg
+[2024-10-30 13:45:02] Color updated with image: uploads/products/67222a4da6e7e.jpg
+[2024-10-30 13:45:02] Processing size: S with quantity: 2
+[2024-10-30 13:45:03] New size inserted with ID: 7
+[2024-10-30 13:45:04] New variant inserted for size: S with quantity: 2
+[2024-10-30 13:45:04] Processing size: M with quantity: 2
+[2024-10-30 13:45:04] New size inserted with ID: 8
+[2024-10-30 13:45:06] New variant inserted for size: M with quantity: 2
+[2024-10-30 13:45:06] Processing size: L with quantity: 2
+[2024-10-30 13:45:06] New size inserted with ID: 9
+[2024-10-30 13:45:07] New variant inserted for size: L with quantity: 2
+[2024-10-30 13:45:07] Processing size: XL with quantity: 2
+[2024-10-30 13:45:08] New size inserted with ID: 10
+[2024-10-30 13:45:09] New variant inserted for size: XL with quantity: 2
+[2024-10-30 13:45:09] Primary image data: variant=0, index=1
+[2024-10-30 13:45:09] Product updated with primary image: uploads/products/67222a3e31d91.jpg
+[2024-10-30 13:45:10] Transaction committed successfully
+[2024-10-30 14:00:35] Starting product insertion process
+[2024-10-30 14:00:35] Transaction started
+[2024-10-30 14:00:35] Product data: {"product_name":"Bliss Wrap Dress","product_description":"A flirty wrap dress with a plunging neckline and flutter sleeves, perfect for brunch dates. The waist tie adds a cinched look, creating a flattering silhouette that enhances curves beautifully.","product_price":"75000","is_sale":"on","sale_price":"70000","category_id":"2","subcategory_id":"2","product_type":"color","variants":[{"color_name":"Blue","color_code":"#a7d7ff","sizes":{"S":"0","M":"2","L":"0","XL":"0"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-30 14:00:36] Product inserted with ID: 2
+[2024-10-30 14:00:36] Processing variant: {"color_name":"Blue","color_code":"#a7d7ff","sizes":{"S":"0","M":"2","L":"0","XL":"0"}}
+[2024-10-30 14:00:36] Color inserted with ID: 5
+[2024-10-30 14:00:36] Processing 1 images for variant 0
+[2024-10-30 14:00:36] Attempting to move uploaded file: C:\xampp\tmp\php20DB.tmp to uploads/products/67222df4c9dcf.jpg
+[2024-10-30 14:00:37] Image inserted: uploads/products/67222df4c9dcf.jpg
+[2024-10-30 14:00:37] Primary image set: uploads/products/67222df4c9dcf.jpg
+[2024-10-30 14:00:37] Color updated with image: uploads/products/67222df4c9dcf.jpg
+[2024-10-30 14:00:37] Processing size: M with quantity: 2
+[2024-10-30 14:00:38] New size inserted with ID: 11
+[2024-10-30 14:00:39] New variant inserted for size: M with quantity: 2
+[2024-10-30 14:00:39] Primary image data: variant=0, index=0
+[2024-10-30 14:00:39] Product updated with primary image: uploads/products/67222df4c9dcf.jpg
+[2024-10-30 14:00:40] Transaction committed successfully
+[2024-10-30 14:09:03] Starting product insertion process
+[2024-10-30 14:09:04] Transaction started
+[2024-10-30 14:09:04] Product data: {"product_name":"Serenity Shift Dress","product_description":"A minimalist, loose-fit shift dress with sleek spaghetti straps and a subtle V-neckline. Perfect for a casual day out or a relaxed evening event, this dress exudes effortless elegance.","product_price":"65000","sale_price":"","is_new":"on","category_id":"2","subcategory_id":"2","product_type":"color","variants":[{"color_name":"Chocolate","color_code":"#938385","sizes":{"S":"2","M":"2","L":"0","XL":"0"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-30 14:09:05] Product inserted with ID: 3
+[2024-10-30 14:09:05] Processing variant: {"color_name":"Chocolate","color_code":"#938385","sizes":{"S":"2","M":"2","L":"0","XL":"0"}}
+[2024-10-30 14:09:05] Color inserted with ID: 6
+[2024-10-30 14:09:05] Processing 1 images for variant 0
+[2024-10-30 14:09:05] Attempting to move uploaded file: C:\xampp\tmp\phpE3CC.tmp to uploads/products/67222ff1752b0.jpg
+[2024-10-30 14:09:05] Image inserted: uploads/products/67222ff1752b0.jpg
+[2024-10-30 14:09:05] Primary image set: uploads/products/67222ff1752b0.jpg
+[2024-10-30 14:09:06] Color updated with image: uploads/products/67222ff1752b0.jpg
+[2024-10-30 14:09:06] Processing size: S with quantity: 2
+[2024-10-30 14:09:07] New size inserted with ID: 12
+[2024-10-30 14:09:08] New variant inserted for size: S with quantity: 2
+[2024-10-30 14:09:08] Processing size: M with quantity: 2
+[2024-10-30 14:09:09] New size inserted with ID: 13
+[2024-10-30 14:09:10] New variant inserted for size: M with quantity: 2
+[2024-10-30 14:09:10] Primary image data: variant=0, index=0
+[2024-10-30 14:09:10] Product updated with primary image: uploads/products/67222ff1752b0.jpg
+[2024-10-30 14:09:11] Transaction committed successfully
+[2024-10-30 14:11:47] Starting product insertion process
+[2024-10-30 14:11:47] Transaction started
+[2024-10-30 14:11:47] Product data: {"product_name":"Sunset Slip Dress","product_description":"This simple, satin slip dress shines in vibrant colors that mimic a sunset. The spaghetti straps and a cowl neckline create a timeless look, with a smooth silhouette that feels as good as it looks.","product_price":"55000","sale_price":"","is_new":"on","category_id":"2","subcategory_id":"2","product_type":"color","variants":[{"color_name":"Black","color_code":"#000000","sizes":{"S":"0","M":"2","L":"2","XL":"0"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-30 14:11:47] Product inserted with ID: 4
+[2024-10-30 14:11:47] Processing variant: {"color_name":"Black","color_code":"#000000","sizes":{"S":"0","M":"2","L":"2","XL":"0"}}
+[2024-10-30 14:11:48] Color inserted with ID: 7
+[2024-10-30 14:11:48] Processing 1 images for variant 0
+[2024-10-30 14:11:48] Attempting to move uploaded file: C:\xampp\tmp\php6354.tmp to uploads/products/6722309419caf.jpg
+[2024-10-30 14:11:48] Image inserted: uploads/products/6722309419caf.jpg
+[2024-10-30 14:11:48] Primary image set: uploads/products/6722309419caf.jpg
+[2024-10-30 14:11:49] Color updated with image: uploads/products/6722309419caf.jpg
+[2024-10-30 14:11:49] Processing size: M with quantity: 2
+[2024-10-30 14:11:50] New size inserted with ID: 14
+[2024-10-30 14:11:50] New variant inserted for size: M with quantity: 2
+[2024-10-30 14:11:50] Processing size: L with quantity: 2
+[2024-10-30 14:11:51] New size inserted with ID: 15
+[2024-10-30 14:11:52] New variant inserted for size: L with quantity: 2
+[2024-10-30 14:11:52] Primary image data: variant=0, index=0
+[2024-10-30 14:11:53] Product updated with primary image: uploads/products/6722309419caf.jpg
+[2024-10-30 14:11:53] Transaction committed successfully
+[2024-10-30 15:20:44] Starting product insertion process
+[2024-10-30 15:20:44] Transaction started
+[2024-10-30 15:20:44] Product data: {"product_name":"Vintage Dream Dress","product_description":"A retro-inspired dress with a fitted bodice, short puff sleeves, and a playful A-line skirt. The classic polka dot or floral prints give it a nostalgic, fun feel that\u2019s perfect for any day outing.","product_price":"45000","sale_price":"","is_new":"on","category_id":"2","subcategory_id":"2","product_type":"texture","variants":[{"color_name":"Butterfly effect","color_code":"#000000","sizes":{"S":"2","M":"2","L":"2","XL":"0"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-30 15:20:44] Product inserted with ID: 5
+[2024-10-30 15:20:44] Processing variant: {"color_name":"Butterfly effect","color_code":"#000000","sizes":{"S":"2","M":"2","L":"2","XL":"0"}}
+[2024-10-30 15:20:46] Transaction rolled back due to error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'texture_sample_path' in 'field list'
+[2024-10-30 15:42:42] Starting product insertion process
+[2024-10-30 15:42:43] Transaction started
+[2024-10-30 15:42:43] Product data: {"product_name":"Vintage Dream Dress","product_description":"A retro-inspired dress with a fitted bodice, short puff sleeves, and a playful A-line skirt. The classic polka dot or floral prints give it a nostalgic, fun feel that\u2019s perfect for any day outing.","product_price":"55000","sale_price":"","is_new":"on","category_id":"2","subcategory_id":"2","product_type":"texture","variants":[{"color_name":"Butterfly effect","color_code":"#000000","sizes":{"S":"0","M":"2","L":"2","XL":"2"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-30 15:42:43] Product inserted with ID: 6
+[2024-10-30 15:42:43] Processing variant: {"color_name":"Butterfly effect","color_code":"#000000","sizes":{"S":"0","M":"2","L":"2","XL":"2"}}
+[2024-10-30 15:42:44] Color inserted with ID: 9
+[2024-10-30 15:42:44] Processing 1 images for variant 0
+[2024-10-30 15:42:44] Attempting to move uploaded file: C:\xampp\tmp\phpA30D.tmp to uploads/products/672245e443756.jpg
+[2024-10-30 15:42:44] Image inserted: uploads/products/672245e443756.jpg
+[2024-10-30 15:42:44] Primary image set: uploads/products/672245e443756.jpg
+[2024-10-30 15:42:45] Color updated with image: uploads/products/672245e443756.jpg
+[2024-10-30 15:42:45] Processing size: M with quantity: 2
+[2024-10-30 15:42:45] New size inserted with ID: 16
+[2024-10-30 15:42:46] New variant inserted for size: M with quantity: 2
+[2024-10-30 15:42:46] Processing size: L with quantity: 2
+[2024-10-30 15:42:47] New size inserted with ID: 17
+[2024-10-30 15:42:48] New variant inserted for size: L with quantity: 2
+[2024-10-30 15:42:48] Processing size: XL with quantity: 2
+[2024-10-30 15:42:49] New size inserted with ID: 18
+[2024-10-30 15:42:50] New variant inserted for size: XL with quantity: 2
+[2024-10-30 15:42:50] Primary image data: variant=0, index=0
+[2024-10-30 15:42:50] Product updated with primary image: uploads/products/672245e443756.jpg
+[2024-10-30 15:42:50] Transaction committed successfully
+[2024-10-30 16:08:06] Starting product insertion process
+[2024-10-30 16:08:06] Transaction started
+[2024-10-30 16:08:06] Product data: {"product_name":"Celestial Bodycon","product_description":"A sleek, fitted dress with subtle metallic accents and ruching along the sides. Its starry print and high neckline make it ideal for nights out, adding a touch of sparkle to any occasion.","product_price":"65000","is_sale":"on","sale_price":"60000","category_id":"2","subcategory_id":"2","product_type":"texture","variants":[{"color_name":"Butterfly effect","color_code":"#000000","sizes":{"S":"0","M":"3","L":"4","XL":"3"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-30 16:08:07] Product inserted with ID: 7
+[2024-10-30 16:08:07] Processing variant: {"color_name":"Butterfly effect","color_code":"#000000","sizes":{"S":"0","M":"3","L":"4","XL":"3"}}
+[2024-10-30 16:08:08] Color inserted with ID: 10
+[2024-10-30 16:08:08] Processing 1 images for variant 0
+[2024-10-30 16:08:08] Attempting to move uploaded file: C:\xampp\tmp\phpE150.tmp to uploads/products/67224bd86a84d.jpg
+[2024-10-30 16:08:08] Image inserted: uploads/products/67224bd86a84d.jpg
+[2024-10-30 16:08:08] Primary image set: uploads/products/67224bd86a84d.jpg
+[2024-10-30 16:08:09] Color updated with image: uploads/products/67224bd86a84d.jpg
+[2024-10-30 16:08:09] Processing size: M with quantity: 3
+[2024-10-30 16:08:10] New size inserted with ID: 19
+[2024-10-30 16:08:11] New variant inserted for size: M with quantity: 3
+[2024-10-30 16:08:11] Processing size: L with quantity: 4
+[2024-10-30 16:08:12] New size inserted with ID: 20
+[2024-10-30 16:08:13] New variant inserted for size: L with quantity: 4
+[2024-10-30 16:08:13] Processing size: XL with quantity: 3
+[2024-10-30 16:08:14] New size inserted with ID: 21
+[2024-10-30 16:08:15] New variant inserted for size: XL with quantity: 3
+[2024-10-30 16:08:15] Primary image data: variant=0, index=0
+[2024-10-30 16:08:15] Product updated with primary image: uploads/products/67224bd86a84d.jpg
+[2024-10-30 16:08:16] Transaction committed successfully
+[2024-10-30 18:13:34] Starting product insertion process
+[2024-10-30 18:13:35] Transaction started
+[2024-10-30 18:13:35] Product data: {"product_name":"Celestial Bodycon","product_description":"A sleek, fitted dress with subtle metallic accents and ruching along the sides. Its starry print and high neckline make it ideal for nights out, adding a touch of sparkle to any occasion.","product_price":"55000","sale_price":"","is_new":"on","category_id":"2","subcategory_id":"2","product_type":"texture","variants":[{"color_name":"White Pattern","color_code":"#000000","sizes":{"S":"0","M":"2","L":"2","XL":"2"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-30 18:13:36] Product inserted with ID: 8
+[2024-10-30 18:13:36] Processing variant: {"color_name":"White Pattern","color_code":"#000000","sizes":{"S":"0","M":"2","L":"2","XL":"2"}}
+[2024-10-30 18:13:37] Color inserted with ID: 1
+[2024-10-30 18:13:37] Processing 1 images for variant 0
+[2024-10-30 18:13:37] Attempting to move uploaded file: C:\xampp\tmp\phpC1B5.tmp to uploads/products/672269411e90b.jpg
+[2024-10-30 18:13:37] Image inserted: uploads/products/672269411e90b.jpg
+[2024-10-30 18:13:37] Primary image set: uploads/products/672269411e90b.jpg
+[2024-10-30 18:13:37] Color updated with image: uploads/products/672269411e90b.jpg
+[2024-10-30 18:13:37] Processing size: M with quantity: 2
+[2024-10-30 18:13:38] New size inserted with ID: 22
+[2024-10-30 18:13:39] New variant inserted for size: M with quantity: 2
+[2024-10-30 18:13:39] Processing size: L with quantity: 2
+[2024-10-30 18:13:40] New size inserted with ID: 23
+[2024-10-30 18:13:41] New variant inserted for size: L with quantity: 2
+[2024-10-30 18:13:41] Processing size: XL with quantity: 2
+[2024-10-30 18:13:42] New size inserted with ID: 24
+[2024-10-30 18:13:42] New variant inserted for size: XL with quantity: 2
+[2024-10-30 18:13:43] Primary image data: variant=0, index=0
+[2024-10-30 18:13:43] Product updated with primary image: uploads/products/672269411e90b.jpg
+[2024-10-30 18:13:43] Transaction committed successfully
+[2024-10-30 18:42:42] Starting product insertion process
+[2024-10-30 18:42:42] Transaction started
+[2024-10-30 18:42:42] Product data: {"product_name":"Celestial Bodycon 3","product_description":"A sleek, fitted dress with subtle metallic accents and ruching along the sides. Its starry print and high neckline make it ideal for nights out, adding a touch of sparkle to any occasion.","product_price":"65000","sale_price":"","is_new":"on","category_id":"2","subcategory_id":"2","product_type":"texture","variants":[{"color_name":"White Pattern","color_code":"#000000","sizes":{"S":"0","M":"3","L":"2","XL":"3"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-30 18:42:42] Product inserted with ID: 9
+[2024-10-30 18:42:42] Processing variant: {"color_name":"White Pattern","color_code":"#000000","sizes":{"S":"0","M":"3","L":"2","XL":"3"}}
+[2024-10-30 18:42:45] Primary image data: variant=0, index=0
+[2024-10-30 18:42:45] No primary image selected for product ID: 9
+[2024-10-30 18:42:46] Transaction committed successfully
+[2024-10-30 18:48:57] Starting product insertion process
+[2024-10-30 18:48:57] Transaction started
+[2024-10-30 18:48:57] Product data: {"product_name":"Testing 4","product_description":"My description","product_price":"32000","sale_price":"","is_new":"on","category_id":"2","subcategory_id":"2","product_type":"texture","variants":[{"color_name":"White Pattern","color_code":"#000000","sizes":{"S":"0","M":"2","L":"0","XL":"0"}}],"primary_image":"0,0","primary_image_variant":"0","primary_image_index":"0"}
+[2024-10-30 18:48:57] Product inserted with ID: 10
+[2024-10-30 18:48:57] Processing variant: {"color_name":"White Pattern","color_code":"#000000","sizes":{"S":"0","M":"2","L":"0","XL":"0"}}
+[2024-10-30 18:49:00] Primary image data: variant=0, index=0
+[2024-10-30 18:49:00] No primary image selected for product ID: 10
+[2024-10-30 18:49:00] Transaction committed successfully
+[2024-10-30 18:59:32] Starting product insertion process
+[2024-10-30 18:59:32] Transaction started
+[2024-10-30 18:59:32] Product data: {"primary_image_variant":"0","primary_image_index":"0","product_name":"Testing 5","product_description":"My description","product_price":"65000","sale_price":"","is_new":"on","category_id":"2","subcategory_id":"2","product_type":"texture","variants":[{"color_name":"White Pattern 3","color_code":"#000000","sizes":{"S":"0","M":"3","L":"2","XL":"2"}}],"primary_image":"0,0"}
+[2024-10-30 18:59:33] Product inserted with ID: 11
+[2024-10-30 18:59:33] Processing variant: {"color_name":"White Pattern 3","color_code":"#000000","sizes":{"S":"0","M":"3","L":"2","XL":"2"}}
+[2024-10-30 18:59:36] Primary image data: variant=0, index=0
+[2024-10-30 18:59:37] Product updated with primary image: uploads/products/67227405e1742.jpg
+[2024-10-30 18:59:37] Transaction committed successfully
+[2024-10-31 12:27:23] Starting product insertion process
+[2024-10-31 12:27:23] Transaction started
+[2024-10-31 12:27:23] Product data: {"primary_image_variant":"0","primary_image_index":"0","product_name":"My texture 4","product_description":"This is my product's description","product_price":"65000","sale_price":"","is_new":"on","category_id":"2","subcategory_id":"2","product_type":"texture","variants":[{"color_name":"White Pattern","color_code":"#000000","sizes":{"S":"0","M":"3","L":"3","XL":"0"}},{"color_name":"Butterfly effect","color_code":"#000000","sizes":{"S":"","M":"3","L":"3","XL":""}}],"primary_image":"0,0"}
+[2024-10-31 12:27:24] Product inserted with ID: 12
+[2024-10-31 12:27:24] Processing variant: {"color_name":"White Pattern","color_code":"#000000","sizes":{"S":"0","M":"3","L":"3","XL":"0"}}
+[2024-10-31 12:27:35] Processing variant: {"color_name":"Butterfly effect","color_code":"#000000","sizes":{"S":"","M":"3","L":"3","XL":""}}
+[2024-10-31 12:27:38] Primary image data: variant=0, index=0
+[2024-10-31 12:27:39] Product updated with primary image: uploads/products/6723699d48083.jpg
+[2024-10-31 12:27:39] Transaction committed successfully

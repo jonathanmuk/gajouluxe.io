@@ -16,57 +16,92 @@ if (isset($_GET['id'])) {
         $product = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($product) {
-            // Fetch variants (colors, sizes, and stock)
+            // Fetch colors
             $stmt = $pdo->prepare("
-                SELECT pv.*, pc.color_name, pc.color_code
-                FROM product_variants pv
-                JOIN product_colors pc ON pv.color_id = pc.id
-                WHERE pv.product_id = ?
+                SELECT pc.id AS color_id, pc.color_name, pc.color_code,
+                       GROUP_CONCAT(DISTINCT ps.size ORDER BY ps.size) AS sizes
+                FROM product_colors pc
+                LEFT JOIN product_sizes ps ON pc.product_id = ps.product_id AND pc.id = ps.color_id
+                WHERE pc.product_id = ?
+                GROUP BY pc.id, pc.color_name, pc.color_code
             ");
             $stmt->execute([$product_id]);
-            $variants = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $colors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            // Fetch images for each variant
+            // Fetch textures
             $stmt = $pdo->prepare("
-                SELECT pi.image_path, pc.color_name
+                SELECT pt.id AS texture_id, pt.texture_name, pt.texture_sample_path,
+                       GROUP_CONCAT(DISTINCT ps.size ORDER BY ps.size) AS sizes
+                FROM product_textures pt
+                LEFT JOIN product_sizes ps ON pt.product_id = ps.product_id AND pt.id = ps.texture_id
+                WHERE pt.product_id = ?
+                GROUP BY pt.id, pt.texture_name, pt.texture_sample_path
+            ");
+            $stmt->execute([$product_id]);
+            $textures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            // Fetch images for colors
+            $stmt = $pdo->prepare("
+                SELECT pi.image_path, pc.id AS color_id, pc.color_name
                 FROM product_images pi
                 JOIN product_colors pc ON pi.color_id = pc.id
                 WHERE pi.product_id = ?
             ");
             $stmt->execute([$product_id]);
-            $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $colorImages = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            // Fetch reviews
+            // Fetch images for textures
             $stmt = $pdo->prepare("
-                SELECT r.*, u.username
-                FROM reviews r
-                JOIN users u ON r.user_id = u.id
-                WHERE r.product_id = ?
+                SELECT pi.image_path, pt.id AS texture_id, pt.texture_name
+                FROM product_images pi
+                JOIN product_textures pt ON pi.texture_id = pt.id
+                WHERE pi.product_id = ?
             ");
             $stmt->execute([$product_id]);
-            $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $textureImages = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             // Organize the data
             $product['variants'] = [];
-            $product['stock'] = [];
-            foreach ($variants as $variant) {
-                $color = $variant['color_name'];
-                if (!isset($product['variants'][$color])) {
-                    $product['variants'][$color] = [
-                        'color_name' => $color,
-                        'color_code' => $variant['color_code'],
-                        'sizes' => [],
-                        'images' => array_filter($images, function($img) use ($color) {
-                            return $img['color_name'] === $color;
-                        })
-                    ];
-                }
-                $product['variants'][$color]['sizes'][] = $variant['size'];
-                $product['stock'][$color][$variant['size']] = $variant['stock_quantity'];
-            }
-            $product['variants'] = array_values($product['variants']);
 
-            $product['reviews'] = $reviews;
+            // Add color variants
+            foreach ($colors as $color) {
+                $color_id = $color['color_id'];
+                $variant_images = array_filter($colorImages, function($img) use ($color_id) {
+                    return $img['color_id'] == $color_id;
+                });
+
+                $product['variants'][] = [
+                    'color_id' => $color_id,
+                    'color_name' => $color['color_name'],
+                    'color_code' => $color['color_code'],
+                    'texture_sample_path' => null,
+                    'sizes' => explode(',', $color['sizes']),
+                    'images' => array_values($variant_images)
+                ];
+            }
+
+            // Add texture variants
+            foreach ($textures as $texture) {
+                $texture_id = $texture['texture_id'];
+                $variant_images = array_filter($textureImages, function($img) use ($texture_id) {
+                    return $img['texture_id'] == $texture_id;
+                });
+
+                $product['variants'][] = [
+                    'color_id' => $texture_id, // Using texture_id as color_id for consistency
+                    'color_name' => $texture['texture_name'],
+                    'color_code' => null,
+                    'texture_sample_path' => $texture['texture_sample_path'],
+                    'sizes' => explode(',', $texture['sizes']),
+                    'images' => array_values($variant_images)
+                ];
+            }
+
+            // Format prices and add other necessary data
+            $product['formatted_price'] = 'Shs.' . number_format($product['price'], 0);
+            if ($product['is_sale']) {
+                $product['formatted_sale_price'] = 'Shs.' . number_format($product['sale_price'], 0);
+            }
 
             echo json_encode($product);
         } else {

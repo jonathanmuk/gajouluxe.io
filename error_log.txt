@@ -1,0 +1,31 @@
+[2024-10-10 17:29:19] Product inserted with ID: 16
+[2024-10-10 17:29:19] Color inserted with ID: 23
+[2024-10-10 17:29:19] Failed to move uploaded file: C:\xampp\tmp\phpB2AE.tmp
+[2024-10-10 17:29:19] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'size_id' in 'field list'
+[2024-10-10 17:35:13] Product inserted with ID: 17
+[2024-10-10 17:35:13] Color inserted with ID: 24
+[2024-10-10 17:35:13] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_path' in 'field list'
+[2024-10-10 17:42:10] Product inserted with ID: 18
+[2024-10-10 17:42:10] Color inserted with ID: 25
+[2024-10-10 17:42:10] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_path' in 'field list'
+[2024-10-10 17:47:31] Product inserted with ID: 19
+[2024-10-10 17:47:31] Color inserted with ID: 26
+[2024-10-10 17:47:31] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_path' in 'field list'
+[2024-10-10 18:12:27] Product inserted with ID: 20
+[2024-10-10 18:12:27] Color inserted with ID: 27
+[2024-10-10 18:12:27] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_path' in 'field list'
+[2024-10-10 18:18:44] Color inserted with ID: 28
+[2024-10-10 18:18:44] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_path' in 'field list'
+[2024-10-10 18:56:39] Color inserted with ID: 29
+[2024-10-10 18:56:39] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'size_id' in 'field list'
+[2024-10-10 19:06:28] Color inserted with ID: 30
+[2024-10-10 19:06:28] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'size_id' in 'field list'
+[2024-10-10 19:27:28] Color inserted with ID: 31
+[2024-10-10 19:39:20] Color inserted with ID: 32
+[2024-10-10 19:49:19] Color inserted with ID: 33
+[2024-10-10 19:49:19] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_path' in 'field list'
+[2024-10-10 20:07:34] Color inserted with ID: 34
+[2024-10-10 20:30:52] Color inserted with ID: 35
+[2024-10-30 08:29:48] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_sale' in 'field list'
+[2024-10-30 13:32:16] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_sale' in 'field list'
+[2024-10-30 15:20:46] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'texture_sample_path' in 'field list'

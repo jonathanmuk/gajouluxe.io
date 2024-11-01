@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $redirect = $_SESSION['redirect_after_login'];
             unset($_SESSION['redirect_after_login']);
         } else {
-            $redirect = $user['role'] === 'admin' ? 'admin_dashboard.php' : 'homepage.html';
+            $redirect = $user['role'] === 'admin' ? 'admin_dashboard.php' : 'homepage.php';
         }
 
         header("Location: $redirect");

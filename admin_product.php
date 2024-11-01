@@ -69,102 +69,95 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Handle colors/textures, their images, and sizes
         foreach ($_POST['variants'] as $variantIndex => $variant) {
             logDebug("Processing variant: " . json_encode($variant));
-            $colorName = $variant['color_name'];
-            $colorCode = $variant['color_code'];
-
-            // Insert color
-            $stmt = $pdo->prepare("INSERT INTO product_colors (product_id, color_name, color_code) VALUES (?, ?, ?)");
-            $stmt->execute([$productId, $colorName, $colorCode]);
-            $colorId = $pdo->lastInsertId();
-
-            logDebug("Color inserted with ID: " . $colorId);
-
-            // Handle images for this color/texture
+            
+            // Check product type and handle accordingly
+            if ($_POST['product_type'] === 'texture') {
+                // Handle texture-based product
+                if (isset($_FILES['variants']['name'][$variantIndex]['texture_sample'])) {
+                    $textureName = $variant['color_name']; // Using color_name field for texture name
+                    $textureSampleFile = $_FILES['variants']['name'][$variantIndex]['texture_sample'];
+                    $textureTmp = $_FILES['variants']['tmp_name'][$variantIndex]['texture_sample'];
+                    
+                    $uploadDir = 'uploads/textures/';
+                    if (!file_exists($uploadDir)) {
+                        mkdir($uploadDir, 0777, true);
+                    }
+                    
+                    $textureExtension = pathinfo($textureSampleFile, PATHINFO_EXTENSION);
+                    $uniqueTextureName = uniqid() . '_texture.' . $textureExtension;
+                    $targetPath = $uploadDir . $uniqueTextureName;
+                    
+                    if (move_uploaded_file($textureTmp, $targetPath)) {
+                        // Insert into product_textures
+                        $stmt = $pdo->prepare("INSERT INTO product_textures (product_id, texture_name, texture_sample_path) VALUES (?, ?, ?)");
+                        $stmt->execute([$productId, $textureName, $targetPath]);
+                        $textureId = $pdo->lastInsertId();
+                        
+                        // Use texture_id for subsequent operations
+                        $variantId = $textureId;
+                    }
+                }
+            } else {
+                // Handle color-based product
+                $colorName = $variant['color_name'];
+                $colorCode = $variant['color_code'];
+                
+                $stmt = $pdo->prepare("INSERT INTO product_colors (product_id, color_name, color_code) VALUES (?, ?, ?)");
+                $stmt->execute([$productId, $colorName, $colorCode]);
+                $variantId = $pdo->lastInsertId();
+            }
+        
+            // Handle images
             if (isset($_FILES['variants']['name'][$variantIndex]['images'])) {
                 $images = $_FILES['variants']['name'][$variantIndex]['images'];
                 $tmpNames = $_FILES['variants']['tmp_name'][$variantIndex]['images'];
-            
-                logDebug("Processing " . count($images) . " images for variant " . $variantIndex);
-            
+                
                 foreach ($images as $key => $imageName) {
                     $tmpName = $tmpNames[$key];
                     $uploadDir = 'uploads/products/';
                     $imageExtension = pathinfo($imageName, PATHINFO_EXTENSION);
                     $uniqueImageName = uniqid() . '.' . $imageExtension;
                     $targetPath = $uploadDir . $uniqueImageName;
-            
-                    logDebug("Attempting to move uploaded file: " . $tmpName . " to " . $targetPath);
-            
+                    
                     if (move_uploaded_file($tmpName, $targetPath)) {
-                        $isPrimary = ($variantIndex == $primaryImageVariant && $key == $primaryImageIndex) ? 1 : 0;
+                        $isPrimary = ($variantIndex == $_POST['primary_image_variant'] && 
+                                     $key == $_POST['primary_image_index']) ? 1 : 0;
                         
-                        try {
-                            // Save image path to product_images table
-                            $stmt = $pdo->prepare("INSERT INTO product_images (product_id, color_id, image_path, is_primary) VALUES (?, ?, ?, ?)");
-                            $stmt->execute([$productId, $colorId, $targetPath, $isPrimary]);
-            
-                            logDebug("Image inserted: " . $targetPath);
-            
-                            if ($isPrimary) {
-                                $primaryImagePath = $targetPath;
-                                logDebug("Primary image set: " . $primaryImagePath);
-                            }
-            
-                            // Update color with first image
-                            if ($key === 0) {
-                                $stmt = $pdo->prepare("UPDATE product_colors SET image_path = ? WHERE id = ?");
-                                $stmt->execute([$targetPath, $colorId]);
-                                logDebug("Color updated with image: " . $targetPath);
-                            }
-                        } catch (PDOException $e) {
-                            logError("Database error: " . $e->getMessage());
-                            throw $e;
+                        // Store the primary image path if this is the primary image
+                        if ($isPrimary) {
+                            $primaryImagePath = $targetPath;
                         }
-                    } else {
-                        logError("Failed to move uploaded file: " . $tmpName);
+                        
+                        // Insert into product_images with appropriate ID
+                        if ($_POST['product_type'] === 'texture') {
+                            $stmt = $pdo->prepare("INSERT INTO product_images (product_id, texture_id, image_path, is_primary) VALUES (?, ?, ?, ?)");
+                        } else {
+                            $stmt = $pdo->prepare("INSERT INTO product_images (product_id, color_id, image_path, is_primary) VALUES (?, ?, ?, ?)");
+                        }
+                        $stmt->execute([$productId, $variantId, $targetPath, $isPrimary]);
                     }
                 }
-            } else {
-                logDebug("No images found for variant " . $variantIndex);
             }
-
-            // Handle sizes for this color/texture
+        
+            // Handle sizes
             foreach ($variant['sizes'] as $size => $quantity) {
                 if ($quantity > 0) {
-                    logDebug("Processing size: " . $size . " with quantity: " . $quantity);
-
-                    // Check if size exists in product_sizes table
-                    $stmt = $pdo->prepare("SELECT id FROM product_sizes WHERE product_id = ? AND color_id = ? AND size = ?");
-                    $stmt->execute([$productId, $colorId, $size]);
-                    $sizeResult = $stmt->fetch(PDO::FETCH_ASSOC);
-
-                    if ($sizeResult) {
-                        $sizeId = $sizeResult['id'];
-                        logDebug("Existing size found with ID: " . $sizeId);
+                    // Insert into product_sizes with appropriate ID
+                    if ($_POST['product_type'] === 'texture') {
+                        $stmt = $pdo->prepare("INSERT INTO product_sizes (product_id, texture_id, size) VALUES (?, ?, ?)");
                     } else {
-                        // Insert new size
                         $stmt = $pdo->prepare("INSERT INTO product_sizes (product_id, color_id, size) VALUES (?, ?, ?)");
-                        $stmt->execute([$productId, $colorId, $size]);
-                        $sizeId = $pdo->lastInsertId();
-                        logDebug("New size inserted with ID: " . $sizeId);
                     }
-
-                    // Check if variant already exists
-                    $stmt = $pdo->prepare("SELECT id FROM product_variants WHERE product_id = ? AND color_id = ? AND size = ?");
-                    $stmt->execute([$productId, $colorId, $size]);
-                    $variantResult = $stmt->fetch(PDO::FETCH_ASSOC);
-
-                    if ($variantResult) {
-                        // Update existing variant
-                        $stmt = $pdo->prepare("UPDATE product_variants SET size_id = ?, stock_quantity = ?, updated_at = NOW() WHERE id = ?");
-                        $stmt->execute([$sizeId, $quantity, $variantResult['id']]);
-                        logDebug("Existing variant updated for size: " . $size . " with quantity: " . $quantity);
+                    $stmt->execute([$productId, $variantId, $size]);
+                    $sizeId = $pdo->lastInsertId();
+        
+                    // Insert into product_variants with appropriate ID
+                    if ($_POST['product_type'] === 'texture') {
+                        $stmt = $pdo->prepare("INSERT INTO product_variants (product_id, texture_id, size_id, size, stock_quantity) VALUES (?, ?, ?, ?, ?)");
                     } else {
-                        // Insert new variant
-                        $stmt = $pdo->prepare("INSERT INTO product_variants (product_id, color_id, size_id, size, stock_quantity, created_at, updated_at) VALUES (?, ?, ?, ?, ?, NOW(), NOW())");
-                        $stmt->execute([$productId, $colorId, $sizeId, $size, $quantity]);
-                        logDebug("New variant inserted for size: " . $size . " with quantity: " . $quantity);
+                        $stmt = $pdo->prepare("INSERT INTO product_variants (product_id, color_id, size_id, size, stock_quantity) VALUES (?, ?, ?, ?, ?)");
                     }
+                    $stmt->execute([$productId, $variantId, $sizeId, $size, $quantity]);
                 }
             }
         }
@@ -172,29 +165,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         logDebug("Primary image data: variant=" . $_POST['primary_image_variant'] . ", index=" . $_POST['primary_image_index']);
 
 
-        // Update product with primary image path
-if (isset($_POST['primary_image_variant']) && isset($_POST['primary_image_index'])) {
-    $primaryVariantIndex = $_POST['primary_image_variant'];
-    $primaryImageIndex = $_POST['primary_image_index'];
-    
-    if (isset($_FILES['variants']['name'][$primaryVariantIndex]['images'][$primaryImageIndex])) {
-        $primaryImageName = $_FILES['variants']['name'][$primaryVariantIndex]['images'][$primaryImageIndex];
-        $uploadDir = 'uploads/products/';
-        $imageExtension = pathinfo($primaryImageName, PATHINFO_EXTENSION);
-        $uniqueImageName = uniqid() . '.' . $imageExtension;
-        $primaryImagePath = $uploadDir . $uniqueImageName;
-        
-        $stmt = $pdo->prepare("UPDATE products SET image_url = ? WHERE id = ?");
-        $result = $stmt->execute([$primaryImagePath, $productId]);
-        
-        if ($result) {
-            logDebug("Product updated with primary image: " . $primaryImagePath);
-        } else {
-            logDebug("Failed to update product with primary image. Error: " . json_encode($stmt->errorInfo()));
-            throw new Exception("Failed to update product with primary image");
-        }
+       // Update product with primary image path
+if (isset($primaryImagePath)) {
+    $stmt = $pdo->prepare("UPDATE products SET image_url = ? WHERE id = ?");
+    $result = $stmt->execute([$primaryImagePath, $productId]);
+
+    if ($result) {
+        logDebug("Product updated with primary image: " . $primaryImagePath);
     } else {
-        logDebug("Selected primary image not found in uploaded files");
+        logDebug("Failed to update product with primary image. Error: " . json_encode($stmt->errorInfo()));
+        throw new Exception("Failed to update product with primary image");
     }
 } else {
     logDebug("No primary image selected for product ID: " . $productId);
@@ -253,6 +233,14 @@ if (isset($_POST['primary_image_variant']) && isset($_POST['primary_image_index'
             border: 1px solid #ced4da;
             border-radius: 5px;
         }
+        .texture-sample-preview {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        margin-top: 10px;
+}
     </style>
 </head>
 <body>
@@ -273,6 +261,9 @@ if (isset($_POST['primary_image_variant']) && isset($_POST['primary_image_index'
             <?php endif; ?>
 
             <form id="productForm" method="POST" enctype="multipart/form-data">
+                <!-- Add these hidden fields right after the form opening tag -->
+                <input type="hidden" name="primary_image_variant" value="">
+                <input type="hidden" name="primary_image_index" value="">
                 <div class="form-step active" data-step="1">
                     <h3>Basic Information</h3>
                     <div class="mb-3">
@@ -347,9 +338,16 @@ if (isset($_POST['primary_image_variant']) && isset($_POST['primary_image_index'
                         <label class="form-label">Name</label>
                         <input type="text" class="form-control" name="variants[0][color_name]" required>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Code (for colors)</label>
+                    <div class="mb-3 color-input">
+                        <label class="form-label">Color Code</label>
                         <input type="color" class="form-control form-control-color" name="variants[0][color_code]">
+                    </div>
+                    <!-- Texture input (shown for texture-based products) -->
+                    <div class="mb-3 texture-input" style="display: none;">
+                        <label class="form-label">Texture Sample</label>
+                        <input type="file" class="form-control texture-sample" name="variants[0][texture_sample]" accept="image/*">
+                        <small class="form-text text-muted">Upload a small sample image of the texture pattern (recommended size: 100x100px)</small>
+                        <div class="texture-preview mt-2"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Images</label>
@@ -484,18 +482,24 @@ if (isset($_POST['primary_image_variant']) && isset($_POST['primary_image_index'
     // Variant addition
     let variantCount = 1;
     $('#addVariant').click(function() {
-        variantCount++;
-        const newVariant = $('.variant-group').first().clone();
-        newVariant.find('input').val('');
-        newVariant.find('textarea').val('');
-        newVariant.find('h4').text(`Color/Texture ${variantCount}`);
-        newVariant.find('input, textarea').each(function() {
-            const name = $(this).attr('name');
-            $(this).attr('name', name.replace('[0]', `[${variantCount - 1}]`));
-        });
-        $('#variantContainer').append(newVariant);
-        updatePrimaryImageOptions();
+    variantCount++;
+    const newVariant = $('.variant-group').first().clone();
+    newVariant.find('input').val('');
+    newVariant.find('textarea').val('');
+    newVariant.find('.texture-preview').empty();
+    
+    const productType = $('#product_type').val();
+    newVariant.find('.variant-title').text(productType === 'texture' ? `Texture ${variantCount}` : `Color ${variantCount}`);
+    
+    newVariant.find('input, textarea').each(function() {
+        const name = $(this).attr('name');
+        $(this).attr('name', name.replace('[0]', `[${variantCount - 1}]`));
     });
+    
+    $('#variantContainer').append(newVariant);
+    updatePrimaryImageOptions();
+});
+
 
     // Update primary image options when images or color names change
     function updatePrimaryImageOptions() {
@@ -522,17 +526,13 @@ if (isset($_POST['primary_image_variant']) && isset($_POST['primary_image_index'
 
     // Handle primary image selection and set hidden fields for primary image variant and index
     $('#primary_image').change(function() {
-        const selectedOption = $(this).find('option:selected');
-        const optionText = selectedOption.text();
-        const matches = optionText.match(/Color\/Texture (\d+) - Image (\d+)/);
-        
-        if (matches) {
-            const variantIndex = parseInt(matches[1]) - 1;
-            const imageIndex = parseInt(matches[2]) - 1;
-            $('input[name="primary_image_variant"]').val(variantIndex);
-            $('input[name="primary_image_index"]').val(imageIndex);
-        }
-    });
+    const selectedValue = $(this).val();
+    if (selectedValue) {
+        const [variantIndex, imageIndex] = selectedValue.split(',');
+        $('input[name="primary_image_variant"]').val(variantIndex);
+        $('input[name="primary_image_index"]').val(imageIndex);
+    }
+});
 
     // Form submission with primary image data
     $('#productForm').submit(function(e) {
@@ -599,13 +599,38 @@ if (isset($_POST['primary_image_variant']) && isset($_POST['primary_image_index'
 
     // Product type change (hide color picker for 'texture' types)
     $('#product_type').change(function() {
-        const productType = $(this).val();
-        if (productType === 'texture') {
-            $('.variant-group').find('input[type="color"]').parent().hide();
-        } else {
-            $('.variant-group').find('input[type="color"]').parent().show();
+    const productType = $(this).val();
+    if (productType === 'texture') {
+        $('.color-input').hide();
+        $('.texture-input').show();
+        $('.variant-name-label').text('Texture Name');
+        $('.variant-title').each(function(index) {
+            $(this).text(`Texture ${index + 1}`);
+        });
+    } else {
+        $('.color-input').show();
+        $('.texture-input').hide();
+        $('.variant-name-label').text('Color Name');
+        $('.variant-title').each(function(index) {
+            $(this).text(`Color ${index + 1}`);
+        });
+    }
+});
+// Add texture preview functionality
+$(document).on('change', '.texture-sample', function(e) {
+    const file = e.target.files[0];
+    const preview = $(this).siblings('.texture-preview');
+    
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.html(`<img src="${e.target.result}" style="width: 100px; height: 100px; object-fit: cover; border: 1px solid #ced4da; border-radius: 5px;">`);
         }
-    });
+        reader.readAsDataURL(file);
+    } else {
+        preview.empty();
+    }
+});
 
     // Save new category via modal
     $('#saveNewCategory').click(function() {

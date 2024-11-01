@@ -1,6 +1,8 @@
 <?php
+$product = null;
 session_start();
 include 'db_connection.php';
+
 
 // Initialize cart and wishlist in session if not exists
 if (!isset($_SESSION['cart'])) {
@@ -37,7 +39,7 @@ $initialCartCount = getCartItemCount();
 $initialWishlistCount = getWishlistItemCount();
 
 
-$product = null;
+
 $is_in_wishlist = false;
 $is_in_cart = false;
 
@@ -78,840 +80,7 @@ if (isset($_SESSION['user_id'])) {
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<style>
-body {
-font-family: 'Poppins', sans-serif;
-background-color: #f8f9fa;
-color: #333;
-}
-.product-card {
-height: 100%;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.product-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-.product-card img {
-transition: transform 0.3s ease;
-height: 200px;
-object-fit: cover;
-}
-.product-card:hover img {
-transform: scale(1.05);
-}
-.product-card .card-title {
-text-align: center;
-font-weight: bold;
-}
-.media-icons a {
-font-size: 24px;
-color: #333;
-margin-right: 15px;
-transition: color 0.3s ease;
-}
-.media-icons a:hover {
-color: #2272FF;
-}
-.deals-container {
-background-color: #f1f1f1;
-padding: 20px;
-margin-top: 30px;
-}
-.performance-section {
-background-color: #e9ecef;
-padding: 40px 0;
-}
-.performance-item {
-text-align: center;
-transition: transform 0.3s ease;
-}
-.performance-item:hover {
-transform: scale(1.05);
-}
-.categories-section {
-padding: 80px 0;
-background-color: #f8f9fa;
-}
-.category-item {
-position: relative;
-overflow: hidden;
-border-radius: 10px;
-height: 250px;
-box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-transition: all 0.3s ease;
-}
-.category-item img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.3s ease;
-}
-.category-item:hover img {
-transform: scale(1.1);
-}
-.category-overlay {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
-display: flex;
-align-items: flex-end;
-justify-content: center;
-opacity: 0;
-padding: 20px;
-transition: opacity 0.3s ease;
-}
-.category-overlay {
-opacity: 1;
-}
-.category-item:hover {
-opacity: 1;
-transform: translateY(-10px);
-box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-.category-overlay h3 {
-color: white;
-font-weight: bold;
-font-size: 1.2rem;
-margin: 0;
-}
-.deals-of-day {
-background-color: #f8f9fa;
-padding: 60px 0;
-}
-.section-title {
-font-size: 2.5rem;
-font-weight: 300;
-color: #333;
-margin-bottom: 20px;
-text-transform: uppercase;
-letter-spacing: 1px;
-}
-
-
-.deal-card {
-background: #fff;
-border: 1px solid #e0e0e0;
-border-radius: 8px;
-overflow: hidden;
-height: 100%;
-transition: all 0.3s ease;
-}
-
-
-.deal-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.deal-image {
-position: relative;
-overflow: hidden;
-}
-.deal-image img {
-width: 100%;
-height: 200px;
-object-fit: cover;
-transition: transform 0.3s ease;
-}
-.deal-card:hover .deal-image img {
-transform: scale(1.05);
-}
-.deal-tag {
-position: absolute;
-top: 10px;
-right: 10px;
-background-color: #ff4136;
-color: #fff;
-padding: 5px 10px;
-font-size: 0.8rem;
-font-weight: bold;
-border-radius: 4px;
-}
-.deal-content {
-padding: 20px;
-text-align: center;
-}
-.deal-title {
-font-size: 1.2rem;
-font-weight: 600;
-margin-bottom: 10px;
-color: #333;
-}
-
-
-.deal-description {
-font-size: 0.9rem;
-color: #666;
-margin-bottom: 15px;
-}
-
-
-.btn-outline-dark {
-border-color: #333;
-color: #333;
-transition: all 0.3s ease;
-}
-
-
-.btn-outline-dark:hover {
-background-color: #333;
-color: #fff;
-}
-
-.product-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-gap: 30px;
-}
-
-
-.product-card {
-position: relative;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-height: 100%;
-overflow: hidden;
-cursor: pointer;
-max-width: 250px;
-margin: 0 auto;
-}
-
-
-.product-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-
-.product-image {
-height: 180px;
-background-size: cover;
-background-position: center;
-transition: transform 0.3s ease;
-position: relative;
-}
-.card-body {
-    padding: 15px;
-    text-align: center;
-}
-
-.card-title {
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-
-.product-card:hover .product-image {
-transform: scale(1.05);
-}
-.category {
-    font-size: 0.8rem;
-    color: #999;
-    margin-bottom: 10px;
-}
-
-.price {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #000000;
-}
-
-
-.product-item {
-background: white;
-border-radius: 10px;
-overflow: hidden;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-transition: transform 0.3s ease;
-}
-
-
-.product-item:hover {
-transform: scale(1.05);
-}
-
-
-.product-info {
-padding: 15px;
-}
-
-
-.text-glow {
-text-shadow: 0 0 10px rgba(255,255,255,0.8);
-}
-.hero-section {
-background: #D9D9D9;
-padding: 20px 0 100px;
-position: relative;
-overflow: hidden;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-padding-top: 100px;
-}
-
-
-.hero-content {
-position: relative;
-z-index: 2;
-flex-grow: 1;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-.hero-nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 0;
-position: relative;
-z-index: 10;
-}
-
-
-.hero-nav .navbar-brand {
-color: #fff;
-font-size: 2rem;
-font-weight: 700;
-text-decoration: none;
-}
-
-
-.hero-title {
-font-size: 4rem;
-font-weight: 700;
-margin-bottom: 20px;
-color: black;
-text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
-.nav-buttons {
-display: flex;
-gap: 10px;
-}
-
-
-.hero-subtitle {
-font-size: 1.5rem;
-margin-bottom: 30px;
-color: black;
-}
-
-
-.nav-btn {
-background-color: #44c7d4;
-color: black;
-border: none;
-padding: 8px 16px;
-font-size: 1rem;
-border-radius: 20px;
-transition: all 0.3s ease;
-text-decoration: none;
-margin-left: 0px;
-}
-.nav-btn:hover {
-background-color: black;
-color: #44c7d4;
-}
-
-
-.hero-btn:hover {
-background-color: #ff9a9e;
-color: #fff;
-transform: translateY(-3px);
-box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-
-.hero-image {
-position: absolute;
-top: 0px;
-left: 0;
-width: 100%;
-height: 100%;
-background-size: cover;
-background-position: center;
-opacity: 0;
-transition: opacity 1s ease-in-out, transform 6s ease-in-out;
-transform: scale(1.1);
-}
-.hero-image-carousel {
-position: absolute;
-right: -100px;
-top: 50%;
-transform: translateY(-50%);
-width: 600px;
-height: 600px;
-border-radius: 50%;
-overflow: hidden;
-box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-animation: float 6s ease-in-out infinite;
-}
-.hero-image-carousel {
-animation: float 6s ease-in-out infinite;
-}
-.hero-image.active {
-opacity: 1;
-transform: scale(1);
-}
-
-
-@keyframes float {
-0% { transform: translateY(-50%) translateX(0); }
-50% { transform: translateY(-50%) translateX(-20px); }
-100% { transform: translateY(-50%) translateX(0); }
-}
-.category-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-gap: 20px;
-}
-footer {
-background-color: #e9ecef;
-color: #333;
-padding: 60px 0 10px;
-}
-
-
-.footer-title {
-font-size: 1.2rem;
-font-weight: 700;
-margin-bottom: 20px;
-color: #444;
-}
-
-
-.footer-text {
-font-size: 1rem;
-line-height: 1.6;
-}
-
-
-.footer-links a {
-color: #666;
-text-decoration: none;
-transition: color 0.3s ease;
-display: block;
-margin-bottom: 10px;
-}
-
-
-.footer-links a:hover {
-color: #44c7d4;
-}
-
-
-.social-icons a {
-color: #666;
-font-size: 1.5rem;
-margin-right: 15px;
-transition: color 0.3s ease;
-}
-
-
-.social-icons a:hover {
-color: #44c7d4;
-}
-.newsletter-form .input-group {
-margin-top: 15px;
-}
-
-
-.newsletter-form .form-control {
-border-top-right-radius: 0;
-border-bottom-right-radius: 0;
-}
-
-
-.newsletter-form .btn {
-border-top-left-radius: 0;
-border-bottom-left-radius: 0;
-background-color: #44c7d4;
-border-color: #44c7d4;
-}
-
-
-.newsletter-form .btn:hover {
-background-color: #3ab4c1;
-border-color: #3ab4c1;
-}
-
-
-.footer-divider {
-margin: 30px 0;
-border-top: 1px solid #ddd;
-}
-
-
-.copyright {
-font-size: 0.9rem;
-color: #777;
-}
-.header {
-background-color: #ffffff;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-padding: 15px 0;
-position: fixed;
-width: 100%;
-top: 0;
-z-index: 1000;
-}
-
-
-.header-content {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-
-.company-name {
-font-size: 24px;
-font-weight: bold;
-color: #333;
-}
-
-
-.nav-buttons {
-display: flex;
-gap: 20px;
-}
-.nav-link {
-color: #333;
-text-decoration: none;
-font-size: 16px;
-transition: color 0.3s ease;
-}
-.nav-link:hover {
-color: #44c7d4;
-}
-.search-section {
-flex-grow: 1;
-margin: 0 30px;
-position: relative;
-}
-
-
-.search-input {
-width: 100%;
-padding: 8px 15px 8px 40px;
-border: 1px solid #ddd;
-border-radius: 20px;
-background-color: #D9D9D9;
-}
-.search-icon {
-position: absolute;
-left: 15px;
-top: 50%;
-transform: translateY(-50%);
-color: #666;
-}
-
-
-.icon-button {
-background: none;
-border: none;
-color: #333;
-cursor: pointer;
-margin-left: 15px;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-transition: color 0.3s ease;
-}
-.icon-button:hover {
-color: #44c7d4;
-}
-.material-icons {
-font-size: 24px;
-}
-.cart-badge {
-position: absolute;
-top: -8px;
-right: -8px;
-background-color: #44c7d4;
-color: black;
-border-radius: 50%;
-padding: 2px 6px;
-font-size: 12px;
-}
-.wishlist-badge {
-position: absolute;
-top: -8px;
-right: -8px;
-background-color: #44c7d4;
-color: black;
-border-radius: 50%;
-padding: 2px 6px;
-font-size: 12px;
-}
-.user-menu {
-position: relative;
-}
-
-
-.user-dropdown {
-display: none;
-position: absolute;
-right: 0;
-top: 100%;
-background-color: white;
-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-border-radius: 4px;
-padding: 10px;
-z-index: 1000;
-}
-
-
-.user-dropdown.show {
-display: block;
-}
-
-
-.user-dropdown a {
-display: block;
-padding: 5px 10px;
-color: #333;
-text-decoration: none;
-transition: background-color 0.3s ease;
-}
-
-
-.user-dropdown a:hover {
-background-color: #f0f0f0;
-}
-
-
-.username {
-margin-right: 10px;
-}
-.flaticon {
-width: 24px;
-height: 24px;
-display: inline-block;
-vertical-align: middle;
-}
-.hero-content .btn {
-display: inline-block;
-width: auto;
-color:#44c7d4;
-}
-.hero-content .btn:hover{
-color:white;
-width: auto;
-}
-.search-results {
-position: absolute;
-top: 100%;
-left: 0;
-right: 0;
-background-color: white;
-border: 1px solid #ddd;
-border-top: none;
-border-radius: 0 0 20px 20px;
-max-height: 300px;
-overflow-y: auto;
-display: none;
-z-index: 1000;
-}
-
-
-.search-result-item {
-padding: 10px;
-cursor: pointer;
-}
-
-
-.search-result-item:hover {
-background-color: #f0f0f0;
-}
-.category-button {
-background-color: #44c7d4;
-color: black;
-border: none;
-padding: 8px 16px;
-font-size: 1rem;
-border-radius: 20px;
-transition: all 0.3s ease;
-text-decoration: none;
-margin-top: 20px;
-}
-
-
-.category-button:hover {
-background-color: black;
-color: #44c7d4;
-}
-
-
-
-
-.wishlist-btn:hover .wishlist-icon,
-.add-to-cart-btn:hover .cart-icon,
-.wishlist-btn:hover .wishlist-icon-active,
-.add-to-cart-btn:hover .cart-icon-active {
-transform: scale(1.1);
-}
-.badge {
-position: absolute;
-top: 10px;
-left: 10px;
-padding: 5px 10px;
-border-radius: 20px;
-font-size: 0.7rem;
-font-weight: 600;
-}
-
-
-.badge-new {
-background: #4CAF50;
-color: white;
-}
-
-
-.badge-sale {
-background: #f44336;
-color: white;
-}
-
-
-.sale-price {
-color: #e74c3c;
-}
-.product-actions {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    display: flex;
-    justify-content: space-between;
-    gap: 160px;
-}
-
-.wishlist-btn, .add-to-cart-btn {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.wishlist-btn:hover, .add-to-cart-btn:hover {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.wishlist-icon, .cart-icon, .wishlist-icon-active, .cart-icon-active {
-    color: #333;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-.message-popup {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    max-width: 300px;
-    text-align: center;
-}
-#message-container {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
-    max-width: 300px;
-    width: 100%;
-}
-
-.alert {
-    text-align: center;
-}
-.wishlist-icon-active, .cart-icon-active {
-    display: none;
-}
-.btn-primary {
-    background-color: black;
-    border-color: black;
-    color: #44c7d4;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #44c7d4;
-    border-color: #44c7d4;
-    color: black;
-}
-
-<style>
-/* Add this to your existing styles */
-.modal-content {
-    border-radius: 15px;
-}
-
-.modal-header {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.modal-body {
-    padding-top: 0;
-}
-
-#productImageCarousel .carousel-item img {
-    border-radius: 10px;
-    object-fit: cover;
-    height: 300px;
-}
-
-.color-option, .size-option {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.size-option {
-    width: auto;
-    height: auto;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-
-.review-stars {
-    color: #ffc107;
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-</style>
+<link rel = "stylesheet" href="homepagestyle.css">
 </head>
 <body>
 <header class="header">
@@ -951,27 +120,33 @@ color: #e74c3c;
 </div>
 </header>
 
-<div id="message-container" style="position: fixed; top: 0; left: 0; right: 0; z-index: 9999;"></div>
+<div id="message-container"></div>
 
 
 <main>
 <section class="hero-section">
-<div class="container">
-<div class="row">
-<div class="col-lg-6 hero-content">
-<h1 class="hero-title" data-aos="fade-up">Welcome to Luxury <br>Gajou Luxe</h1>
-<p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Discover the luxury of amber in our exquisite collection.</p>
-<div data-aos="fade-up" data-aos-delay="400">
-<a href="products.php" class="btn btn-dark btn-lg">Shop Now</a>
-</div>
-</div>
-</div>
-</div>
-<div class="hero-image-carousel" data-aos="fade-left" data-aos-delay="600">
-<div class="hero-image active" style="background-image: url('images/photo_2024-08-07_22-12-23.jpg');"></div>
-<div class="hero-image" style="background-image: url('images/InShot_20240930_160819465.jpg');"></div>
-<div class="hero-image" style="background-image: url('images/photo_2024-08-08_17-00-32.jpg');"></div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 hero-content">
+                <h1 class="hero-title" data-aos="fade-up">Welcome to Luxury <br>Gajou Luxe</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Discover the luxury of amber in our exquisite collection.</p>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <button class="cta" onclick="window.location.href='products.php'">
+                        <span>Shop Now</span>
+                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-image-carousel" data-aos="fade-left" data-aos-delay="600">
+        <div class="hero-image active" style="background-image: url('images/photo_2024-08-07_22-12-23.jpg');"></div>
+        <div class="hero-image" style="background-image: url('images/InShot_20240930_160819465.jpg');"></div>
+        <div class="hero-image" style="background-image: url('images/photo_2024-08-08_17-00-32.jpg');"></div>
+    </div>
 </section>
 
 
@@ -1223,60 +398,70 @@ echo "Error: " . $e->getMessage();
 
 
 <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-6">
-            <div id="productImageCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Images will be dynamically inserted here -->
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#productImageCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#productImageCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </div>
-          <div class="col-md-6">
-            <h2 id="modalProductName"></h2>
-            <p id="modalProductPrice" class="fs-4 fw-bold"></p>
-            <p id="modalProductDescription"></p>
-            <div id="modalProductColors" class="mb-3">
-              <h5>Colors:</h5>
-              <!-- Colors will be dynamically inserted here -->
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="productImageCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- Images will be dynamically inserted here -->
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#productImageCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#productImageCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 id="modalProductName"></h2>
+                        <p id="modalProductPrice" class="fs-4 fw-bold"></p>
+                        <p id="modalProductDescription"></p>
+                        <div id="modalProductColors" class="mb-3">
+                            <h5>Colors:</h5>
+                            <!-- Colors will be dynamically inserted here -->
+                        </div>
+                        <div id="modalProductSizes" class="mb-3">
+                            <h5>Sizes:</h5>
+                            <!-- Sizes will be dynamically inserted here -->
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <?php
+                                if (is_array($product) && isset($product['id'])) {
+                                    $productId = $product['id'];
+                                } else {
+                                    // If $product is not set or not an array, use a default value
+                                    $productId = 'unknown';
+                                }
+                            ?>
+                            <button class="add-to-cart-btn2 btn btn-primary" data-product-id="<?php echo htmlspecialchars($productId); ?>">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button id="modalAddToWishlist" class="btn btn-outline-secondary">
+                                <i class="far fa-heart"></i> Add to Wishlist
+                            </button>
+                        </div>
+                        <div id="modalMessage" class="mt-2"></div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h4>Reviews</h4>
+                        <div id="modalProductReviews">
+                            <!-- Reviews will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="modalProductSizes" class="mb-3">
-              <h5>Sizes:</h5>
-              <!-- Sizes will be dynamically inserted here -->
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <button id="modalAddToCart" class="btn btn-primary">Add to Cart</button>
-              <button id="modalAddToWishlist" class="btn btn-outline-secondary">
-                <i class="far fa-heart"></i> Add to Wishlist
-              </button>
-            </div>
-          </div>
         </div>
-        <div class="row mt-4">
-          <div class="col-12">
-            <h4>Reviews</h4>
-            <div id="modalProductReviews">
-              <!-- Reviews will be dynamically inserted here -->
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </div>
 
 
@@ -1311,6 +496,80 @@ heroImages[currentImageIndex].classList.add('active');
 
 
 setInterval(changeHeroImage, 5000); // Change image every 5 seconds
+
+
+function showMessage(message) {
+        // Remove any existing messages
+        $('#message-container').empty();
+        $('<div>')
+            .addClass('alert alert-info')
+            .text(message)
+            .appendTo('#message-container')
+            .fadeIn('slow')
+            .delay(1000)
+            .fadeOut('slow', function() { $(this).remove(); });
+    }
+    function updateCartIcon($button, isAdded) {
+        $button.find('.cart-icon').toggle(!isAdded);
+        $button.find('.cart-icon-active').toggle(isAdded);
+    }
+    function updateBadges(data) { 
+        if (data && typeof data === 'object') {
+            if ('wishlistCount' in data) {
+                $('#wishlistBadge').text(data.wishlistCount).toggle(data.wishlistCount > 0);
+            }
+            if ('cartCount' in data) {
+                $('#cartBadge').text(data.cartCount).toggle(data.cartCount > 0);
+            }
+
+            if (Array.isArray(data.wishlistItems)) {
+                $('.wishlist-btn').each(function() {
+                    let productId = $(this).data('product-id');
+                    updateWishlistIcon($(this), data.wishlistItems.includes(productId.toString()));
+                });
+            }
+
+            if (Array.isArray(data.cartItems)) {
+                $('.add-to-cart-btn').each(function() {
+                    let productId = $(this).data('product-id');
+                    updateCartIcon($(this), data.cartItems.includes(productId.toString()));
+                });
+            }
+        } else {
+            console.error('Invalid data received in updateBadges:', data);
+        }
+    } 
+    function updateWishlistIcon($button, isAdded) {
+        $button.find('.wishlist-icon').toggle(!isAdded);
+        $button.find('.wishlist-icon-active').toggle(isAdded);
+    }
+
+    // Initial update of badges
+    function initialUpdateBadges() {
+        let wishlistCount = parseInt($('#wishlistBadge').text());
+        let cartCount = parseInt($('#cartBadge').text());
+
+        $('#wishlistBadge').toggle(wishlistCount > 0);
+        $('#cartBadge').toggle(cartCount > 0);
+    }
+
+    initialUpdateBadges();
+
+    // Update badges every 0.5 seconds
+    setInterval(function() {
+        $.ajax({
+            url: 'get_badge_counts.php',
+            method: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                updateBadges(response);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error('Error fetching badge counts:', textStatus, errorThrown);
+            }
+        });
+    }, 500);
+
 </script>
 <script>
 $(document).ready(function() {
@@ -1497,81 +756,7 @@ $(document).ready(function() {
         });
     });
 
-function updateWishlistIcon($button, isAdded) {
-        $button.find('.wishlist-icon').toggle(!isAdded);
-        $button.find('.wishlist-icon-active').toggle(isAdded);
-    }
 
-
-function updateCartIcon($button, isAdded) {
-        $button.find('.cart-icon').toggle(!isAdded);
-        $button.find('.cart-icon-active').toggle(isAdded);
-    }
-
-    function updateBadges(data) {
-        console.log('Updating badges with data:', data);
-        
-        if (data && typeof data === 'object') {
-            if ('wishlistCount' in data) {
-                $('#wishlistBadge').text(data.wishlistCount).toggle(data.wishlistCount > 0);
-            }
-            if ('cartCount' in data) {
-                $('#cartBadge').text(data.cartCount).toggle(data.cartCount > 0);
-            }
-
-            if (Array.isArray(data.wishlistItems)) {
-                $('.wishlist-btn').each(function() {
-                    let productId = $(this).data('product-id');
-                    updateWishlistIcon($(this), data.wishlistItems.includes(productId.toString()));
-                });
-            }
-
-            if (Array.isArray(data.cartItems)) {
-                $('.add-to-cart-btn').each(function() {
-                    let productId = $(this).data('product-id');
-                    updateCartIcon($(this), data.cartItems.includes(productId.toString()));
-                });
-            }
-        } else {
-            console.error('Invalid data received in updateBadges:', data);
-        }
-    }
-
-    function showMessage(message) {
-        $('<div>')
-            .addClass('alert alert-info')
-            .text(message)
-            .appendTo('#message-container')
-            .fadeIn('slow')
-            .delay(3000)
-            .fadeOut('slow', function() { $(this).remove(); });
-    }
-
-    // Initial update of badges
-    function initialUpdateBadges() {
-        let wishlistCount = parseInt($('#wishlistBadge').text());
-        let cartCount = parseInt($('#cartBadge').text());
-
-        $('#wishlistBadge').toggle(wishlistCount > 0);
-        $('#cartBadge').toggle(cartCount > 0);
-    }
-
-    initialUpdateBadges();
-
-    // Update badges every 0.5 seconds
-    setInterval(function() {
-        $.ajax({
-            url: 'get_badge_counts.php',
-            method: 'GET',
-            dataType: 'json',
-            success: function(response) {
-                updateBadges(response);
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.error('Error fetching badge counts:', textStatus, errorThrown);
-            }
-        });
-    }, 500);
 
 
 });
@@ -1583,8 +768,7 @@ $(document).ready(function() {
   $(document).on('click', '.product-card', function(e) {
     e.preventDefault();
     let productId = $(this).data('product-id');
-    console.log('Product clicked, element:', this);
-    console.log('Product ID from data attribute:', productId);
+    console.log('Product clicked, ID:', productId);
 
     if (!productId) {
         console.error('No product ID found');
@@ -1596,20 +780,21 @@ $(document).ready(function() {
       method: 'GET',
       data: { id: productId.toString() },
       dataType: 'json',
-      beforeSend: function(xhr, settings) {
-        console.log('AJAX request data:', settings.data);
-      },
       success: function(product) {
-        console.log('Product data received:', product); 
+        console.log('Product data received:', product);
+
+        if (!product || typeof product !== 'object') {
+          console.error('Invalid product data received:', product);
+          return;
+        }
+
         if (product.error) {
           console.error('Error:', product.error);
           return;
         }
-        console.log('About to populate modal');
+
         populateProductModal(product);
-        console.log('Modal populated, about to show');
         $('#productModal').modal('show');
-        console.log('Modal should be visible now');
       },
       error: function(jqXHR, textStatus, errorThrown) {
         console.error('Error fetching product details:', textStatus, errorThrown);
@@ -1619,86 +804,143 @@ $(document).ready(function() {
   });
 
   function populateProductModal(product) {
-    console.log('Populating modal with:', product);
+  // Add null checks at the beginning of the function
+  if (!product) {
+        console.error('Product data is undefined');
+        return;
+    }
+    // Initialize empty arrays if properties are undefined
+    product.variants = product.variants || [];
+    product.reviews = product.reviews || [];
 
+    console.log('Full product data:', product);
     $('#modalProductName').text(product.name);
-    $('#modalProductPrice').text('$' + parseFloat(product.price).toFixed(2));
+    
     if (product.is_sale) {
-    $('#modalProductPrice').html(`
-        <s>$${parseFloat(product.price).toFixed(2)}</s>
-        <span class="text-danger">Sale: $${parseFloat(product.sale_price).toFixed(2)}</span>
-    `);
-} else {
-    $('#modalProductPrice').text('$' + parseFloat(product.price).toFixed(2));
-}
+        $('#modalProductPrice').html(`
+            <s class="text-danger">${product.formatted_price}</s>
+            <span class="ms-2">${product.formatted_sale_price}</span>
+        `);
+    } else {
+        $('#modalProductPrice').text(product.formatted_price);
+    }
+    
     $('#modalProductDescription').text(product.description);
 
-    // Populate image carousel
     let carouselInner = $('#productImageCarousel .carousel-inner');
-    carouselInner.empty();
-
-    // Populate colors and sizes
-    let colorsContainer = $('#modalProductColors');
     let sizesContainer = $('#modalProductSizes');
-    colorsContainer.empty();
+    carouselInner.empty();
     sizesContainer.empty();
 
-    let defaultColor = product.default_color;
+    let colorsContainer = $('#modalProductColors');
+    colorsContainer.empty();
+    colorsContainer.append('<h5>Available Options:</h5>');
 
+    // Create a flex container for the options
+    let coloroptionsContainer = $('<div class="d-flex flex-wrap gap-2"></div>').appendTo(colorsContainer);
     product.variants.forEach((variant, index) => {
-        // Add color option
-        colorsContainer.append(`
-            <button class="btn btn-sm me-2 color-option" 
-                    style="background-color: ${variant.color_code};" 
-                    data-color="${variant.color_name}">
-            </button>
-        `);
-
-        // Add images to carousel
-        variant.images.forEach((image, imgIndex) => {
-            carouselInner.append(`
-                <div class="carousel-item ${index === 0 && imgIndex === 0 ? 'active' : ''}" data-color="${variant.color_name}">
-                    <img src="${image}" class="d-block w-100" alt="${product.name} - ${variant.color_name}">
+        if (variant.texture_sample_path) {
+            // For texture-based products
+            coloroptionsContainer.append(`
+                <div class="texture-option ${index === 0 ? 'active' : ''}" 
+                     data-color-id="${variant.color_id}">
+                    <img src="${variant.texture_sample_path}" 
+                         alt="${variant.color_name}"
+                         class="texture-sample"
+                         style="width: 40px; height: 40px; object-fit: cover; border-radius: 50%; cursor: pointer; 
+                                ${index === 0 ? 'border: 2px solid #007bff' : 'border: 1px solid #ddd'}">
+                    <div class="color-name mt-1 text-center small">${variant.color_name}</div>
                 </div>
             `);
-        });
+        } else {
+            // For color-based products
+            coloroptionsContainer.append(`
+                <div class="color-option ${index === 0 ? 'active' : ''}"
+                     data-color-id="${variant.color_id}">
+                    <div class="color-swatch" 
+                         style="background-color: ${variant.color_code}; 
+                                width: 40px; height: 40px; 
+                                border-radius: 50%;
+                                display: inline-block;
+                                border: ${index === 0 ? '2px solid #007bff' : '1px solid #ddd'};
+                                cursor: pointer;"></div>
+                    <div class="color-name mt-1 text-center small">${variant.color_name}</div>
+                </div>
+            `);
+        }
 
-        // Add sizes
         if (index === 0) {
-            variant.sizes.forEach(size => {
-                let quantity = product.stock[variant.color_name][size] || 0;
-                sizesContainer.append(`
-                    <button class="btn btn-outline-secondary btn-sm me-2 size-option" 
-                            data-size="${size}" 
-                            ${quantity === 0 ? 'disabled' : ''}>
-                        ${size} ${quantity === 0 ? '(Out of Stock)' : ''}
-                    </button>
-                `);
-            });
+            updateSizesAndImages(variant);
         }
     });
 
-    // Add event listener for color selection
-    $('.color-option').click(function() {
-        let selectedColor = $(this).data('color');
+    // Update click handlers for both texture and color options
+    $('.texture-option, .color-option').click(function() {
+        let $this = $(this);
+        let colorId = $this.data('color-id');
         
-        // Update carousel
-        $('.carousel-item').removeClass('active').filter(`[data-color="${selectedColor}"]`).first().addClass('active');
+        // Update active states
+        $('.texture-option, .color-option').removeClass('active')
+            .find('img, .color-swatch').css('border-color', '#ddd');
+        
+        $this.addClass('active')
+            .find('img, .color-swatch').css('border-color', '#007bff');
+        
+        let selectedVariant = product.variants.find(v => v.color_id === colorId);
+        if (selectedVariant) {
+            updateSizesAndImages(selectedVariant);
+        }
+    });
+
+    function updateSizesAndImages(variant) {
+        console.log('Updating sizes and images for variant:', variant);
         
         // Update sizes
         sizesContainer.empty();
-        let variant = product.variants.find(v => v.color_name === selectedColor);
-        variant.sizes.forEach(size => {
-            let quantity = product.stock[selectedColor][size] || 0;
-            sizesContainer.append(`
-                <button class="btn btn-outline-secondary btn-sm me-2 size-option" 
-                        data-size="${size}" 
-                        ${quantity === 0 ? 'disabled' : ''}>
-                    ${size} ${quantity === 0 ? '(Out of Stock)' : ''}
-                </button>
+        if (Array.isArray(variant.sizes)) {
+            variant.sizes.forEach(size => {
+                sizesContainer.append(`
+                    <button class="btn btn-outline-secondary btn-sm me-2 size-option" 
+                            data-size="${size}">
+                        ${size}
+                    </button>
+                `);
+            });
+        } else {
+            console.error('variant.sizes is not an array:', variant.sizes);
+        }
+
+        // Update carousel
+        carouselInner.empty();
+        if (Array.isArray(variant.images) && variant.images.length > 0) {
+            console.log('Variant images:', variant.images);
+            variant.images.forEach((image, index) => {
+                if (image && image.image_path) {
+                    carouselInner.append(`
+                        <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                            <img src="${image.image_path}" class="d-block w-100" alt="${product.name} - ${variant.color_name}">
+                        </div>
+                    `);
+                } else {
+                    console.error('Invalid image data:', image);
+                }
+            });
+        } else {
+            console.error('No images found for this variant:', variant);
+            // Use the primary image as a fallback
+            carouselInner.append(`
+                <div class="carousel-item active">
+                    <img src="${product.primary_image}" class="d-block w-100" alt="${product.name} - Primary Image">
+                </div>
             `);
-        });
-    });
+        }
+
+        // Refresh the carousel
+        $('.carousel').carousel('dispose');
+        $('.carousel').carousel();
+    }
+
+
 
     // Populate reviews
     let reviewsContainer = $('#modalProductReviews');
@@ -1716,17 +958,89 @@ $(document).ready(function() {
     });
 
     // Update modal buttons
-    $('#modalAddToCart').data('product-id', product.id);
+    $('.add-to-cart-btn2').data('product-id', product.id);
     $('#modalAddToWishlist').data('product-id', product.id);
 
     console.log('Modal population complete');
-  }
 
-  // Modal Add to Cart button click handler
-  $('#modalAddToCart').click(function() {
-    let productId = $(this).data('product-id');
-    addToCart(productId);
-  });
+    // Add quantity input
+    let quantityContainer = $('<div class="mb-3">').appendTo($('#modalProductSizes').parent());
+    $('<label for="quantityInput">Quantity:</label>').appendTo(quantityContainer);
+    $('<input type="number" id="quantityInput" class="form-control" value="1" min="1">').appendTo(quantityContainer);
+
+    // Add event listeners for color and size selection
+    $('#modalProductColors').on('click', '.color-option', function() {
+      $(this).addClass('active').siblings().removeClass('active');
+      updateSizesAndImages(product.variants.find(v => v.color_id === $(this).data('color-id')));
+    });
+
+    $('#modalProductSizes').on('click', '.size-option', function() {
+      $(this).addClass('active').siblings().removeClass('active');
+    });
+}
+
+$(document).on('click', '.texture-option', function() {
+    let $this = $(this);
+    let colorId = $this.data('color-id');
+    
+    // Update active state
+    $('.texture-option').removeClass('active');
+    $this.addClass('active');
+    
+    // Find and update the variant
+    let selectedVariant = product.variants.find(v => v.color_id === colorId);
+    if (selectedVariant) {
+        updateSizesAndImages(selectedVariant);
+    }
+});
+
+ // Modal Add to Cart button click handler
+$(document).on('click', '.add-to-cart-btn2', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    let $button = $(this);
+    let productId = $button.data('product-id');
+    let selectedColor = $('#modalProductColors .color-option.active, #modalProductColors .texture-option.active');
+    let colorId = selectedColor.data('color-id');
+    let size = $('#modalProductSizes .size-option.active').data('size');
+    let quantity = parseInt($('#quantityInput').val());
+
+    // Check if product has textures by looking for texture-option elements
+    let isTextureProduct = $('#modalProductColors .texture-option').length > 0;
+
+    // Validate selections
+    if (!productId) {
+        $('#modalMessage').text('Invalid product').removeClass('text-success').addClass('text-danger');
+        return;
+    }
+
+    if (!colorId) {
+        let message = isTextureProduct ? 'Please select a texture' : 'Please select a color';
+        $('#modalMessage').text(message).removeClass('text-success').addClass('text-danger');
+        return;
+    }
+
+    if (!size) {
+        $('#modalMessage').text('Please select a size').removeClass('text-success').addClass('text-danger');
+        return;
+    }
+
+    if (isNaN(quantity) || quantity < 1) {
+        $('#modalMessage').text('Please enter a valid quantity').removeClass('text-success').addClass('text-danger');
+        return;
+    }
+
+    // Toggle between add and remove
+    if ($button.hasClass('added-to-cart')) {
+        addToCart(productId, colorId, size, -quantity);
+    } else {
+        addToCart(productId, colorId, size, quantity);
+    }
+});
+
+
+
 
   // Modal Add to Wishlist button click handler
   $('#modalAddToWishlist').click(function() {
@@ -1734,15 +1048,92 @@ $(document).ready(function() {
     addToWishlist(productId);
   });
 
-  function addToCart(productId) {
-    // Implement your add to cart logic here
-    console.log('Adding product to cart:', productId);
-  }
+  function addToCart(productId, colorId, size, quantity) {
+    let $button = $('.add-to-cart-btn2[data-product-id="' + productId + '"]');
+
+    // Disable the button to prevent multiple clicks
+    $button.prop('disabled', true);
+    $.ajax({
+        url: 'modal_cart_update_ajax.php',
+        method: 'POST',
+        data: { 
+            product_id: productId,
+            color_id: colorId,
+            size: size,
+            quantity: quantity
+        },
+        dataType: 'json',
+        success: function(response) {
+            if (response.success) {
+                if (response.action === 'added' || response.action === 'updated') {
+                    $button.html('<i class="fas fa-check"></i> Added to Cart');
+                    $button.removeClass('btn-primary').addClass('btn-success added-to-cart');
+                    $('#modalMessage').text('Item added to cart').removeClass('text-danger').addClass('text-success');
+                } else if (response.action === 'removed') {
+                    $button.html('<i class="fas fa-cart-plus"></i> Add to Cart');
+                    $button.removeClass('btn-success added-to-cart').addClass('btn-primary');
+                    $('#modalMessage').text('Item removed from cart').removeClass('text-success').addClass('text-danger');
+                }
+
+                 // Update all product cards
+                 updateProductCards(response.cartItems);
+
+                // Update badges
+                updateBadges(response);
+                } else {
+                $('#modalMessage').text('Error: ' + response.message).removeClass('text-success').addClass('text-danger');
+                }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error('Cart AJAX error:', textStatus, errorThrown);
+            $('#modalMessage').text('An error occurred. Please try again.').removeClass('text-success').addClass('text-danger');
+        },
+        complete: function() {
+            // Re-enable the button after the request is complete
+            setTimeout(function() {
+                $button.prop('disabled', false);
+            }, 1000); // Wait for 1 second before re-enabling
+        }
+    });
+}
+
+function updateProductCards(cartItems) {
+    $('.add-to-cart-btn').each(function() {
+        let cardProductId = $(this).data('product-id');
+        if (cartItems.includes(cardProductId.toString())) {
+            $(this).find('.cart-icon').hide();
+            $(this).find('.cart-icon-active').show();
+        } else {
+            $(this).find('.cart-icon').show();
+            $(this).find('.cart-icon-active').hide();
+        }
+    });
+}
+
 
   function addToWishlist(productId) {
-    // Implement your add to wishlist logic here
-    console.log('Adding product to wishlist:', productId);
+    $.ajax({
+      url: 'wishlist_toggle_ajax.php',
+      method: 'POST',
+      data: { product_id: productId },
+      dataType: 'json',
+      success: function(response) {
+        if (response.success) {
+          updateWishlistIcon($('.wishlist-btn[data-product-id="' + productId + '"]'), response.action === 'added');
+          updateBadges(response);
+          showMessage(response.action === 'added' ? 'Item added to wishlist' : 'Item removed from wishlist');
+          $('#productModal').modal('hide');
+        } else {
+          showMessage('Error: ' + response.message);
+        }
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error('Wishlist AJAX error:', textStatus, errorThrown);
+        showMessage('An error occurred. Please try again.');
+      }
+    });
   }
+
 
   // Check if modal is properly initialized
   var modalElement = document.getElementById('productModal');
